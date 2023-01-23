@@ -1,0 +1,74 @@
+uuid: 0c4da8c2-f66b-4066-8df0-fde8e23046ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion.field_items
+    - field.field.paragraph.accordion.field_title
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_accordion_item:
+      children:
+        - field_items
+      label: 'Accordion Item'
+      parent_name: group_accordion
+      region: content
+      weight: 1
+      format_type: accordion_item
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+    group_accordion:
+      children:
+        - group_accordion_item
+      label: Accordion
+      parent_name: group_testing
+      region: content
+      weight: 1
+      format_type: accordion
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        effect: none
+    group_testing:
+      children:
+        - group_accordion
+      label: TESTING
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: paragraph.accordion.default
+targetEntityType: paragraph
+bundle: accordion
+mode: default
+content:
+  field_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_title: true

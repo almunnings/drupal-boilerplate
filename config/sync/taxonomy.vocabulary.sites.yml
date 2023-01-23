@@ -1,0 +1,8 @@
+uuid: e9420d15-686e-4b97-a8e0-6095040033a8
+langcode: en
+status: true
+dependencies: {  }
+name: Sites
+vid: sites
+description: 'Multi tenancy sites.'
+weight: 0

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="DrupalBoiler">
+    <description>PHP CodeSniffer</description>
+    <rule ref="Drupal"/>
+    <rule ref="DrupalPractice"/>
+
+    <!-- Sensible exclude -->
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/contrib/*</exclude-pattern>
+    <exclude-pattern>*/web/core/*</exclude-pattern>
+
+    <!-- Limit extensions -->
+    <arg name="extensions" value="inc,install,module,php,profile,theme,yml"/>
+</ruleset>

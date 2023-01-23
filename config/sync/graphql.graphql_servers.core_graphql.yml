@@ -1,0 +1,16 @@
+uuid: 360d55e9-0830-4793-9684-9e3d50d8ccbf
+langcode: en
+status: true
+dependencies: {  }
+name: core_graphql
+label: 'Core GraphQL'
+endpoint: /graphql
+debug_flag: 2
+schema: graphql_compose
+caching: true
+batching: true
+disable_introspection: false
+query_depth: null
+query_complexity: null
+schema_configuration: {  }
+persisted_queries_settings: {  }

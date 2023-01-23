@@ -1,0 +1,22 @@
+uuid: 24703939-7b0d-4dc0-b916-3717de61ceb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dvb
+_core:
+  default_config_hash: mSUaaWceoXx6CIZGakmi3IqOKHL5TO-uAbkDFZ5rHh0
+id: dvb_messages
+theme: dvb
+region: messages
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

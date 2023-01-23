@@ -1,0 +1,25 @@
+uuid: 303de030-4810-4ebe-a3a8-0c86125bed05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_citation
+    - paragraphs.paragraphs_type.quote
+  module:
+    - graphql_compose
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+id: paragraph.quote.field_citation
+field_name: field_citation
+entity_type: paragraph
+bundle: quote
+label: Citation
+description: 'Give credit for the quote.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

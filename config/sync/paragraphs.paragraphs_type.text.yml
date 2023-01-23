@@ -1,0 +1,19 @@
+uuid: ebb54ef4-983a-4cf4-be82-821d9e0f1b81
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:c02185e0-0725-4d15-a3df-f90410095bfd'
+  module:
+    - graphql_compose
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+id: text
+label: Text
+icon_uuid: c02185e0-0725-4d15-a3df-f90410095bfd
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuMi4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIyIEZvbnRpY29ucywgSW5jLiAtLT48ZGVmcz48c3R5bGU+LmZhLXNlY29uZGFyeXtvcGFjaXR5Oi40fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJmYS1zZWNvbmRhcnkiIGQ9Ik00NDggNjQuMDF2NjRjMCAxNy42OS0xNC4zMSAzMi0zMiAzMnMtMzItMTQuMzEtMzItMzJ2LTMyaC0xMjh2MzIwaDQ4YzE3LjY5IDAgMzIgMTQuMzEgMzIgMzJzLTE0LjMxIDMxLjEtMzIgMzEuMWgtMTYwYy0xNy42OSAwLTMyLTE0LjMxLTMyLTMxLjFzMTQuMzEtMzIgMzItMzJIMTkydi0zMjBINjR2MzJjMCAxNy42OS0xNC4zMSAzMi0zMiAzMnMtMzItMTQuMzEtMzItMzJ2LTY0YzAtMTcuNjkgMTQuMzEtMzIgMzItMzJoMzg0QzQzMy43IDMyLjAxIDQ0OCA0Ni4zMyA0NDggNjQuMDF6Ii8+PC9zdmc+'
+description: 'Text based content with formatting.'
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: e046d994-7640-46da-881f-bbd0f680699b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.table
+  module:
+    - graphql_compose
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+id: paragraph.table.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: table
+label: Title
+description: 'Add a title to your block'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 9ed5e94f-3d57-4750-84b8-4d38e5253daa
+langcode: en
+status: true
+dependencies:
+  module:
+    - graphql_compose
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  graphql_compose:
+    enabled: true
+    query_load_enabled: true
+    edges_enabled: true
+name: Page
+type: page
+description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: b730c700-5e53-42f4-a018-d718ee05b2c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dvb
+_core:
+  default_config_hash: wCxRNE0Z79KaW0BUPH_hYxNnzpxTszO9VnJKaihrXao
+id: dvb_powered
+theme: dvb
+region: footer
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+parameters:
+  # Configure Cross-Site HTTP requests (CORS).
+  # Read https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+  # for more information about the topic in general.
+  # Note: By default the configuration is disabled.
+  cors.config:
+    enabled: true
+    # Specify allowed headers, like 'x-allowed-header'.
+    allowedHeaders: ["content-type", "authorization", "origin"]
+    # Specify allowed request methods, specify ['*'] to allow all possible ones.
+    allowedMethods: ["OPTIONS", "GET", "POST"]
+    # Configure requests allowed from specific origins.
+    allowedOriginsPatterns:
+      ['#\.lndo\.site$#', '#localhost:\d+$#', '#somedomain\.com\.au$#']
+    # Sets the Access-Control-Expose-Headers header.
+    exposedHeaders: false
+    # Sets the Access-Control-Max-Age header.
+    maxAge: 86400
+    # Sets the Access-Control-Allow-Credentials header.
+    supportsCredentials: true

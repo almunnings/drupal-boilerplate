@@ -1,0 +1,22 @@
+uuid: 1500c6ff-8fac-404b-8778-0ee56d0eedf6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dvb
+_core:
+  default_config_hash: b2XEnanh0IXaV0YXkM24MejpbjvZlRFF5ndNrRTPTZg
+id: dvb_breadcrumbs
+theme: dvb
+region: breadcrumb
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

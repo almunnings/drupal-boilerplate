@@ -1,0 +1,22 @@
+uuid: 6c1a357d-ed53-4432-a365-e54c278ad69c
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - dvb
+_core:
+  default_config_hash: R2-3uMuy3h-fQ-MDIWztG1A053pnMUw_3A5BEfRzlKk
+id: dvb_help
+theme: dvb
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

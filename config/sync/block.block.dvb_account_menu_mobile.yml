@@ -1,0 +1,27 @@
+uuid: 10f728c4-335b-4250-b082-f933c6e15c7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - dvb
+_core:
+  default_config_hash: M_6di4aAz-byjDe-gZQWXlR56gTnshxsC5-PoqOmShg
+id: dvb_account_menu_mobile
+theme: dvb
+region: mobile_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

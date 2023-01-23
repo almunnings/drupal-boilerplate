@@ -1,0 +1,23 @@
+uuid: 3c7e9df7-8f89-41d0-a2b0-ab46fc1fb902
+langcode: en
+status: true
+dependencies:
+  module:
+    - graphql_compose
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+_core:
+  default_config_hash: eJw8n6Tk2tO3ZysuEeGR1gZa1yRffaZzR4t0Q7iNurs
+id: audio
+label: Audio
+description: 'A locally hosted audio file.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_audio_file
+field_map:
+  name: name

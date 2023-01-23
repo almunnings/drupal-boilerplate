@@ -1,0 +1,15 @@
+uuid: 2af635d1-3baf-44a4-acbf-7003f8305d4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - graphql_compose
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+id: another_type
+label: 'Another Type'
+revision: 0
+description: ''

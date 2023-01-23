@@ -1,0 +1,19 @@
+uuid: 26c73035-2acf-48eb-881d-ceb0a2037a10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_api_key
+    - taxonomy.vocabulary.sites
+id: taxonomy_term.sites.field_api_key
+field_name: field_api_key
+entity_type: taxonomy_term
+bundle: sites
+label: 'API Key'
+description: 'GraphQL API Key enables access to content per site.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 97b424de-3bf2-4462-af54-1cf3fce024c3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dvb
+_core:
+  default_config_hash: c77lqHnmPf-_yDfKM1dCjKZO3PxayqetT4H8U26KG30
+id: dvb_page_title
+theme: dvb
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

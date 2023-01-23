@@ -1,0 +1,31 @@
+uuid: 829fe490-5682-44ee-a4e5-07ffcc2170d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.another_type
+    - field.storage.block_content.body
+  module:
+    - allowed_formats
+    - graphql_compose
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+id: block_content.another_type.body
+field_name: body
+entity_type: block_content
+bundle: another_type
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

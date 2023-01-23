@@ -1,0 +1,25 @@
+uuid: 1892a955-334c-482a-9a6f-9ea286517996
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:20f7831d-2972-4c05-967d-03ba024642bc'
+  module:
+    - graphql_compose
+    - layout_paragraphs
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+id: section
+label: Section
+icon_uuid: 20f7831d-2972-4c05-967d-03ba024642bc
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuMi4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIyIEZvbnRpY29ucywgSW5jLiAtLT48ZGVmcz48c3R5bGU+LmZhLXNlY29uZGFyeXtvcGFjaXR5Oi40fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJmYS1wcmltYXJ5IiBkPSJNMTQ0IDMyQzE3MC41IDMyIDE5MiA1My40OSAxOTIgODBWMjQwQzE5MiAyNjYuNSAxNzAuNSAyODggMTQ0IDI4OEg0OEMyMS40OSAyODggMCAyNjYuNSAwIDI0MFY4MEMwIDUzLjQ5IDIxLjQ5IDMyIDQ4IDMySDE0NHpNMTQ0IDM1MkMxNzAuNSAzNTIgMTkyIDM3My41IDE5MiA0MDBWNDMyQzE5MiA0NTguNSAxNzAuNSA0ODAgMTQ0IDQ4MEg0OEMyMS40OSA0ODAgMCA0NTguNSAwIDQzMlY0MDBDMCAzNzMuNSAyMS40OSAzNTIgNDggMzUySDE0NHoiLz48cGF0aCBjbGFzcz0iZmEtc2Vjb25kYXJ5IiBkPSJNNDAwIDMyQzQyNi41IDMyIDQ0OCA1My40OSA0NDggODBWMTEyQzQ0OCAxMzguNSA0MjYuNSAxNjAgNDAwIDE2MEgzMDRDMjc3LjUgMTYwIDI1NiAxMzguNSAyNTYgMTEyVjgwQzI1NiA1My40OSAyNzcuNSAzMiAzMDQgMzJINDAwek00MDAgMjI0QzQyNi41IDIyNCA0NDggMjQ1LjUgNDQ4IDI3MlY0MzJDNDQ4IDQ1OC41IDQyNi41IDQ4MCA0MDAgNDgwSDMwNEMyNzcuNSA0ODAgMjU2IDQ1OC41IDI1NiA0MzJWMjcyQzI1NiAyNDUuNSAyNzcuNSAyMjQgMzA0IDIyNEg0MDB6Ii8+PC9zdmc+'
+description: 'Sections are layout containers with composition for embedding more components.'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_onecol: 'One column'
+      layout_twocol: 'Two column'

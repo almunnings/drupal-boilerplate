@@ -1,0 +1,10 @@
+# Default ignores
+.git
+vendor/
+**/web/sites/*/files
+**/node_modules
+**/*.sql
+**/*.gz
+**/*.log
+
+# Custom

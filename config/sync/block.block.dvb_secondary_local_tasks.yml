@@ -1,0 +1,22 @@
+uuid: 47fa97bb-ae3f-4199-8128-218c601de6ac
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dvb
+_core:
+  default_config_hash: kZs01GT7Z-5P6yroqdF3MBejBcIddxu_aLDI0fTPGag
+id: dvb_secondary_local_tasks
+theme: dvb
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

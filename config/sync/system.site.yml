@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: 72cefeba-4b1c-41f1-ac3a-a3416cb3e67e
+name: Demo
+mail: al.munnings@gmail.com
+slogan: 'Project boilerplate.'
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

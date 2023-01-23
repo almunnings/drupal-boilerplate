@@ -1,0 +1,19 @@
+uuid: 700cc2fa-5608-4677-8895-dc99767c0add
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:2cb62a94-2d90-4a18-8fc4-e04ff4f862d8'
+  module:
+    - graphql_compose
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+id: table
+label: Table
+icon_uuid: 2cb62a94-2d90-4a18-8fc4-e04ff4f862d8
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuMi4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIyIEZvbnRpY29ucywgSW5jLiAtLT48ZGVmcz48c3R5bGU+LmZhLXNlY29uZGFyeXtvcGFjaXR5Oi40fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJmYS1wcmltYXJ5IiBkPSJNMCA5NkMwIDYwLjY1IDI4LjY1IDMyIDY0IDMySDQ0OEM0ODMuMyAzMiA1MTIgNjAuNjUgNTEyIDk2VjQxNkM1MTIgNDUxLjMgNDgzLjMgNDgwIDQ0OCA0ODBINjRDMjguNjUgNDgwIDAgNDUxLjMgMCA0MTZWOTZ6TTY0IDE2MFY0MTZINDQ4VjE2MEg2NHoiLz48cGF0aCBjbGFzcz0iZmEtc2Vjb25kYXJ5IiBkPSJNNjQgMzIwVjI1NkgyMjRWMTYwSDI4OFYyNTZINDQ4VjMyMEgyODhWNDE2SDIyNFYzMjBINjR6Ii8+PC9zdmc+'
+description: 'Create a table with your own columns and rows.'
+behavior_plugins: {  }

@@ -1,0 +1,28 @@
+uuid: 0d6f6785-5a16-4f8a-b34e-7310cf2c64ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+  module:
+    - filter
+    - graphql
+    - media
+    - system
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'cancel account'
+  - 'change own username'
+  - 'execute core_graphql arbitrary graphql requests'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view media'

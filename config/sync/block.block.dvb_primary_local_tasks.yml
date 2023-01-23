@@ -1,0 +1,22 @@
+uuid: 5ac392e6-400e-4010-a89b-a9faa4b740b1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dvb
+_core:
+  default_config_hash: SDEc_5KwbSD4cMyHHoqfW76xu8q17opv6ytZ8Jj7Vx8
+id: dvb_primary_local_tasks
+theme: dvb
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

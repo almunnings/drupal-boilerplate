@@ -1,0 +1,22 @@
+uuid: a863de02-267d-460e-9436-dc17cfa461fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dvb
+_core:
+  default_config_hash: '-wLRhhLu9acNdd67YGFnEIlf9zl-ApgHkg487iW_01U'
+id: dvb_content
+theme: dvb
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

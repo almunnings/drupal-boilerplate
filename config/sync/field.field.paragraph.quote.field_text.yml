@@ -1,0 +1,30 @@
+uuid: 4e906e26-3205-480d-9db2-d26f8ef5d3ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.quote
+  module:
+    - allowed_formats
+    - graphql_compose
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+id: paragraph.quote.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: quote
+label: Quote
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

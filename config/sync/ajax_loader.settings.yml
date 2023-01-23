@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: yrWS_jCTMw-iDL86dXLCNby6FvnztsiDgw5Cc6RJGSc
+throbber: throbber_cube_grid
+hide_ajax_message: true
+always_fullscreen: true
+show_admin_paths: false
+throbber_position: body

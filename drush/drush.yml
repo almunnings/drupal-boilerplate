@@ -1,0 +1,13 @@
+command:
+  core:
+    rsync:
+      options:
+        # List of paths to exclude, seperated by :
+        exclude-paths: "/css:/php:/js:/private/tmp:/styles:"
+  sql:
+    dump:
+      options:
+        # Omit cache and similar tables (including during a sql:sync).
+        structure-tables-list: cache,cache_*,cachetags,batch,flood,history,search_*,sessions,watchdog,feeds_log
+        # Do not write any CREATE LOGFILE GROUP or CREATE TABLESPACE statements in output.
+        extra-dump: --no-tablespaces

@@ -1,0 +1,22 @@
+uuid: ad7fd3c8-42a2-4d61-9765-8b864c16cbf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - filter
+    - graphql
+    - media
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'execute core_graphql arbitrary graphql requests'
+  - 'use text format restricted_html'
+  - 'view media'

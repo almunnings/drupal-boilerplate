@@ -1,0 +1,20 @@
+uuid: 2a4f433a-88a4-442a-8181-4b550332a9f7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dvb
+_core:
+  default_config_hash: bb2A5psTADAp4oiQR-A6a8St3lww8Breng8KLho-tK4
+id: dvb_primary_admin_actions
+theme: dvb
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: e62c5940-daa1-4919-8a97-38a99374ed22
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - dvb
+_core:
+  default_config_hash: 9sz2XGrSzEKLzmrhBC9VG_SfMXVQLyVG8FuxapsaiJc
+id: dvb_main_menu
+theme: dvb
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 3
+  expand_all_items: true
+visibility: {  }

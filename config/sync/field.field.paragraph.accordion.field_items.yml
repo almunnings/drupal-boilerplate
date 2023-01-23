@@ -1,0 +1,63 @@
+uuid: 3aaa9123-3bc6-49a3-a95b-eae112bd966c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.table
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+    - graphql_compose
+third_party_settings:
+  graphql_compose:
+    enabled: true
+    query_load_enabled: false
+id: paragraph.accordion.field_items
+field_name: field_items
+entity_type: paragraph
+bundle: accordion
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text: text
+      media: media
+      quote: quote
+      table: table
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -16
+        enabled: false
+      block:
+        weight: -15
+        enabled: false
+      call_to_action:
+        weight: -14
+        enabled: false
+      media:
+        weight: -13
+        enabled: true
+      quote:
+        weight: -12
+        enabled: true
+      section:
+        weight: -11
+        enabled: false
+      table:
+        weight: -10
+        enabled: true
+      text:
+        weight: -17
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,32 @@
+uuid: 3b47fbfc-5c76-479a-907c-a9ecac932af4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sites.field_api_key
+    - taxonomy.vocabulary.sites
+id: taxonomy_term.sites.default
+targetEntityType: taxonomy_term
+bundle: sites
+mode: default
+content:
+  field_api_key:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true
