@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8f0aa3caa544cc9bf8a8f562df481c2",
+    "content-hash": "774e3131a6af7ca78387db903956d10c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2970,87 +2970,6 @@
             }
         },
         {
-            "name": "drupal/structure_sync",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/structure_sync.git",
-                "reference": "2.0.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/structure_sync-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "673b9e30495dee3987cda9c1f5a15de0905886da"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "drush/drush": "^9 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1666800906",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "colan",
-                    "homepage": "https://www.drupal.org/user/58704"
-                },
-                {
-                    "name": "fidovdbos",
-                    "homepage": "https://www.drupal.org/user/1494332"
-                },
-                {
-                    "name": "joachim",
-                    "homepage": "https://www.drupal.org/user/107701"
-                },
-                {
-                    "name": "louis-cuny",
-                    "homepage": "https://www.drupal.org/user/3606332"
-                },
-                {
-                    "name": "mparker17",
-                    "homepage": "https://www.drupal.org/user/536298"
-                },
-                {
-                    "name": "spiderman",
-                    "homepage": "https://www.drupal.org/user/1631"
-                },
-                {
-                    "name": "timKruijsen",
-                    "homepage": "https://www.drupal.org/user/3513437"
-                },
-                {
-                    "name": "vinlaurens",
-                    "homepage": "https://www.drupal.org/user/2945689"
-                }
-            ],
-            "description": "Tool for syncing structural data that is stored as content.",
-            "homepage": "https://www.drupal.org/project/structure_sync",
-            "support": {
-                "source": "https://git.drupalcode.org/project/structure_sync"
-            }
-        },
-        {
             "name": "drupal/tablefield",
             "version": "dev-2.x",
             "source": {
@@ -3245,6 +3164,115 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/typed_data",
                 "issues": "https://www.drupal.org/project/issues/typed_data"
+            }
+        },
+        {
+            "name": "drupal/webform",
+            "version": "6.2.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform.git",
+                "reference": "6.2.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform-6.2.0-beta5.zip",
+                "reference": "6.2.0-beta5",
+                "shasum": "db1e05e7dc841b52b5721e82c5ad9f8aa2583c61"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "require-dev": {
+                "drupal/address": "~1.0",
+                "drupal/bartik": "~1.0",
+                "drupal/bootstrap": "~3.0",
+                "drupal/captcha": "~1.0",
+                "drupal/chosen": "~3.0",
+                "drupal/ckeditor": "~1.0",
+                "drupal/clientside_validation": "~4.0",
+                "drupal/clientside_validation_jquery": "*",
+                "drupal/devel": "~5.0",
+                "drupal/entity": "~1.0",
+                "drupal/entity_print": "~2.0",
+                "drupal/hal": "1 - 2",
+                "drupal/jquery_ui": "~1.0",
+                "drupal/jquery_ui_checkboxradio": "~2.0",
+                "drupal/jquery_ui_datepicker": "~1.0",
+                "drupal/lingotek": "~4.0",
+                "drupal/mailsystem": "~4.0",
+                "drupal/paragraphs": "~1.0",
+                "drupal/select2": "~1.0",
+                "drupal/seven": "~1.0",
+                "drupal/smtp": "~1.0",
+                "drupal/token": "~1.0",
+                "drupal/variationcache": "~1.0",
+                "drupal/webform_access": "*",
+                "drupal/webform_attachment": "*",
+                "drupal/webform_clientside_validation": "*",
+                "drupal/webform_devel": "*",
+                "drupal/webform_entity_print": "*",
+                "drupal/webform_node": "*",
+                "drupal/webform_options_limit": "*",
+                "drupal/webform_scheduled_email": "*",
+                "drupal/webform_share": "*",
+                "drupal/webform_ui": "*"
+            },
+            "suggest": {
+                "drupal/jquery_ui_checkboxradio": "Provides jQuery UI Checkboxradio library. Required by the Webform jQueryUI Buttons module. The Webform jQueryUI Buttons module is deprecated because jQueryUI is no longer maintained.",
+                "drupal/jquery_ui_datepicker": "Provides jQuery UI Datepicker library. Required to support datepickers. The Webform jQueryUI Datepicker module is deprecated because jQueryUI is no longer maintained."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "6.2.0-beta5",
+                    "datestamp": "1673535773",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Rockowitz (jrockowitz)",
+                    "homepage": "https://www.drupal.org/u/jrockowitz",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://www.drupal.org/node/7404/committers",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Liam Morland",
+                    "homepage": "https://www.drupal.org/user/493050"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                },
+                {
+                    "name": "torotil",
+                    "homepage": "https://www.drupal.org/user/865256"
+                }
+            ],
+            "description": "Enables the creation of webforms and questionnaires.",
+            "homepage": "https://drupal.org/project/webform",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform",
+                "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/webform",
+                "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
             }
         },
         {
@@ -12265,7 +12293,8 @@
         "drupal/graphql_compose": 20,
         "drupal/linkit": 20,
         "drupal/tablefield": 20,
-        "drupal/typed_data": 20
+        "drupal/typed_data": 20,
+        "drupal/webform": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
@@ -12273,5 +12302,5 @@
         "php": ">= 8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

@@ -2,6 +2,7 @@ name: drupal-boilerplate
 recipe: drupal10
 config:
   php: 8.1
+  composer_version: 2-latest
   database: mariadb:10.6
   webroot: web
   build:
@@ -11,6 +12,7 @@ events:
   post-start:
     - appserver: >
         if ! drush status --fields=bootstrap | grep -qi "successful"; then
+          sleep 5
           drush si --existing-config --account-name=admin --account-pass=password -y
           drush cr
           drush uli

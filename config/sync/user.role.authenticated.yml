@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.full_html
     - filter.format.restricted_html
+    - filter.format.webform_default
   module:
     - filter
     - graphql
@@ -25,4 +26,5 @@ permissions:
   - 'use text format basic_html'
   - 'use text format full_html'
   - 'use text format restricted_html'
+  - 'use text format webform_default'
   - 'view media'

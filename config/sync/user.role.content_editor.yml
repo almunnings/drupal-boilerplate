@@ -46,7 +46,6 @@ permissions:
   - 'revert all revisions'
   - 'update media'
   - 'use text format basic_html'
-  - 'use workbench access'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
