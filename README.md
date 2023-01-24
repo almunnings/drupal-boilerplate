@@ -10,7 +10,13 @@
 lando start
 ```
 
-## Building theme locally
+### Using NPM
+
+```bash
+lando npm <command>
+```
+
+### Building theme locally
 
 ```bash
 lando theme install
@@ -23,35 +29,49 @@ And to build for production
 lando theme run build
 ```
 
-## Project specific documentation
-
 ## FAQ
 
 ### How do I override Lando locally?
 
 Create `/.lando.local.yml` file for local development.
 
-### How can I optimize my Lando?
+### How can I connect to the database?
 
-Take a look at [Lando performance](https://docs.lando.dev/config/performance.html#configuration)
+Get database credentials:
+
+```bash
+lando info -s database --path "0.creds" --format table
+```
+
+Get database host and port:
+
+```bash
+lando info -s database --path "0.external_connection" --format table
+```
+
+### How can I test email?
+
+Use MailHog
+
+```bash
+lando info -s mailhog --path "0.urls"
+```
 
 ### What does the template do?
 
 When installing the given `composer.json` some tasks are taken care of:
 
 - Drupal will be installed in the `web` directory.
-- Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
-  instead of the one provided by Drupal (`web/vendor/autoload.php`).
+- Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`, instead of the one provided by Drupal (`web/vendor/autoload.php`).
 - Modules (packages of type `drupal-module`) will be placed in `web/modules/contrib/`
 - Themes (packages of type `drupal-theme`) will be placed in `web/themes/contrib/`
 - Profiles (packages of type `drupal-profile`) will be placed in `web/profiles/contrib/`
-- Creates the `web/sites/default/files`-directory.
+- Creates the `web/sites/default/files` directory.
 - Latest version of drush is installed locally for use at `vendor/bin/drush`.
 
 ### Should I commit the contrib modules I download?
 
-Composer recommends **no**. They provide [argumentation against but also
-workarounds if a project decides to do it anyway](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).
+Composer recommends **no**. They provide [argumentation against but also workarounds if a project decides to do it anyway](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).
 
 ### How can I apply patches to downloaded modules?
 
