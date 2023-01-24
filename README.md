@@ -10,6 +10,19 @@
 lando start
 ```
 
+## Building theme locally
+
+```bash
+lando theme install
+lando theme run dev
+```
+
+And to build for production
+
+```bash
+lando theme run build
+```
+
 ## Project specific documentation
 
 ## FAQ

@@ -1,13 +1,41 @@
 name: drupal-boilerplate
 
 recipe: drupal10
+
 config:
   php: 8.1
   composer_version: 2-latest
   database: mariadb:10.6
   webroot: web
+  via: nginx
   build:
     - composer install --profile
+
+services:
+  node:
+    type: node:custom
+    ssl: true
+    sslExpose: false
+    scanner: false
+    port: 3000
+    overrides:
+      image: node:18
+
+proxy:
+  node:
+    - node.drupal-boilerplate.lndo.site:3000
+
+tooling:
+  npm:
+    service: node
+    description: Run NPM commands within the node service.
+    cmd: /usr/local/bin/npm
+
+  theme:
+    service: node
+    description: Run NPM commands for the theme.
+    dir: /app/web/themes/contrib/dvb
+    cmd: /usr/local/bin/npm
 
 events:
   post-start:
