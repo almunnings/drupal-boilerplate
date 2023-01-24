@@ -1,5 +1,7 @@
 # Drupal Boilerplate
 
+![Lando start](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml/badge.svg?branch=main)
+
 ## Requirements
 
 - [Lando](https://docs.lando.dev/basics/installation.html#system-requirements)
