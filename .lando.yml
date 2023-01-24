@@ -5,22 +5,33 @@ recipe: drupal10
 config:
   php: 8.1
   composer_version: 2.5.1
-  database: mariadb:10.6
-  webroot: web
+  database: mariadb:custom
   via: nginx
+  webroot: web
   build:
     - composer install --profile
 
+proxy:
+  node:
+    - "node.drupal-boilerplate.lndo.site:3000"
+
 services:
+  # Use official mariadb for arm64 speed/support.
+  # https://github.com/bitnami/charts/issues/7305
+  database:
+    app_mount: false
+    overrides:
+      image: mariadb:10.6
+      command: docker-entrypoint.sh mariadbd
+      environment:
+        MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
+
   mailhog:
     type: mailhog
+    app_mount: false
     portforward: true
     hogfrom:
       - appserver
-
-  # solr:
-  #   type: solr:8
-  #   portforward: true
 
   node:
     type: node:custom
@@ -30,10 +41,6 @@ services:
     port: 3000
     overrides:
       image: node:18
-
-proxy:
-  node:
-    - node.drupal-boilerplate.lndo.site:3000
 
 tooling:
   npm:

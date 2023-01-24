@@ -29,6 +29,14 @@ And to build for production
 lando theme run build
 ```
 
+### Configuring node domain
+
+```yml
+proxy:
+  node:
+    - node.<< LANDO APP NAME >>.lndo.site:3000
+```
+
 ## FAQ
 
 ### How do I override Lando locally?
