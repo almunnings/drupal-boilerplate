@@ -4,8 +4,19 @@
  * @file
  * Drupal all environment configuration file.
  *
- * This file should contain all settings.php configurations that are
- * needed by all environments.
+ * This file contains default configurations for all environments.
+ *
+ * All environments:
+ * - settings.php
+ * - services.yml
+ *
+ * Production (Optional):
+ * - settings.production.php
+ * - services.production.yml
+ *
+ * Development & Lando:
+ * - settings.development.php
+ * - services.development.yml
  */
 
 // Import sensible Drupal defaults.
@@ -35,7 +46,7 @@ $settings['hash_salt'] = hash('sha256', getenv('DRUPAL_HASH_SALT') ?: getenv('MA
 // Disable error display.
 $config['system.logging']['error_level'] = 'hide';
 
-// Page performance defaults. 10 mins.
+// Page performance. 10 min page cache.
 $config['system.performance']['css']['preprocess'] = TRUE;
 $config['system.performance']['js']['preprocess'] = TRUE;
 $config['system.performance']['cache']['page']['max_age'] = 600;
@@ -54,16 +65,8 @@ $databases['default']['default'] = [
   ],
 ];
 
-/**
- * Load services definition file.
- *
- * Services.development.yml is loaded for lando & development environments.
- * settings.development.php is loaded for lando & development environments.
- *
- * services.local.php is loaded last for all envs. Do not commit this file.
- * settings.local.php is loaded last for all envs. Do not commit this file.
- */
-
+// Environment specific config.
+// Add a local config in at the end for good measure.
 foreach ([getenv('ENVIRONMENT_TYPE'), 'local'] as $env) {
   if (file_exists(__DIR__ . '/settings.' . $env . '.php')) {
     include __DIR__ . '/settings.' . $env . '.php';
