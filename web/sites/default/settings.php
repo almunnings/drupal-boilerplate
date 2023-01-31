@@ -11,6 +11,11 @@
 // Import sensible Drupal defaults.
 include __DIR__ . "/default.settings.php";
 
+// If no ENVIRONMENT_TYPE is defined, set to development in Lando or production by default.
+if (!getenv('ENVIRONMENT_TYPE')) {
+  putenv('ENVIRONMENT_TYPE=' . (getenv('LANDO') ? 'development' : 'production'));
+}
+
 // Path config.
 $settings['config_sync_directory'] = getenv('DRUPAL_CONFIG_DIR') ?: '../config/sync';
 $settings['file_public_path'] = getenv('DRUPAL_PUBLIC_DIR') ?: 'sites/default/files';
@@ -52,20 +57,14 @@ $databases['default']['default'] = [
 /**
  * Load services definition file.
  *
- * Services.development.yml is loaded for lando & development environments.
+ * services.development.yml is loaded for lando & development environments.
  * settings.development.php is loaded for lando & development environments.
  *
  * services.local.php is loaded last for all envs. Do not commit this file.
  * settings.local.php is loaded last for all envs. Do not commit this file.
  */
 
-$envs = ['local'];
-
-if (getenv('ENVIRONMENT_TYPE') === 'development' || getenv('LANDO')) {
-  array_unshift($envs, 'development');
-}
-
-foreach ($envs as $env) {
+foreach ([getenv('ENVIRONMENT_TYPE'), 'local'] as $env) {
   if (file_exists(__DIR__ . '/settings.' . $env . '.php')) {
     include __DIR__ . '/settings.' . $env . '.php';
   }

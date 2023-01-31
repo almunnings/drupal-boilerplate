@@ -18,6 +18,12 @@ proxy:
     - "node.drupal-boilerplate.lndo.site:3000"
 
 services:
+  # Optionally force the app into production mode.
+  # appserver:
+  #   overrides:
+  #     environment:
+  #       ENVIRONMENT_TYPE: production
+
   database:
     # Use official mariadb for arm64 speed/support.
     # https://github.com/bitnami/charts/issues/7305
