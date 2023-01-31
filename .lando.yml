@@ -13,8 +13,7 @@ config:
 
 proxy:
   node:
-    # This will need to be changed if you want to use HMR for Vite
-    # drupal-boilerplate should be changed to whatever "name:" is.
+    # Change drupal-boilerplate to match "name:" when renaming project.
     - "node.drupal-boilerplate.lndo.site:3000"
 
 tooling:
@@ -69,6 +68,7 @@ services:
     ssl: true
     sslExpose: false
     port: 3000
+    scanner: false
 
 events:
   post-start:
