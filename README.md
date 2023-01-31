@@ -1,6 +1,6 @@
 # Drupal Boilerplate
 
-![Lando start](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml/badge.svg?branch=main)
+[![Lando Start](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml/badge.svg?branch=main)](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml)
 
 ## Requirements
 
