@@ -5,6 +5,10 @@ parameters:
     debug: true
     auto_reload: true
     cache: false
+  cors.config:
+    # Configure requests allowed from specific origins.
+    allowedOriginsPatterns: ['#\.lndo\.site$#', '#localhost:\d+$#']
+
 services:
   cache.backend.null:
     class: Drupal\Core\Cache\NullBackendFactory

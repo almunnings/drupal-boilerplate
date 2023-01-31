@@ -10,8 +10,7 @@ parameters:
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
     allowedMethods: ["OPTIONS", "GET", "POST"]
     # Configure requests allowed from specific origins.
-    allowedOriginsPatterns:
-      ['#\.lndo\.site$#', '#localhost:\d+$#', '#somedomain\.com\.au$#']
+    allowedOriginsPatterns: ['#somedomain\.com\.au$#']
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
     # Sets the Access-Control-Max-Age header.
