@@ -6,7 +6,6 @@ parameters:
     auto_reload: true
     cache: false
   cors.config:
-    # Configure requests allowed from specific origins.
     allowedOriginsPatterns: ['#\.lndo\.site$#', '#localhost:\d+$#']
 
 services:
