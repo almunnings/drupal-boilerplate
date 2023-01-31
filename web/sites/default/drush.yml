@@ -2,12 +2,12 @@ command:
   core:
     rsync:
       options:
-        # List of paths to exclude, seperated by :
+        # Exclude css, php, js and image styles to speed up rsync.
         exclude-paths: "/css:/php:/js:/private/tmp:/styles:"
   sql:
     dump:
       options:
-        # Omit cache and similar tables (including during a sql:sync).
+        # Omit content of cache tables to speed up exports and imports.
         structure-tables-list: cache,cache_*,cachetags,batch,flood,history,search_*,sessions,watchdog,feeds_log
         # Do not write any CREATE LOGFILE GROUP or CREATE TABLESPACE statements in output.
         extra-dump: --no-tablespaces

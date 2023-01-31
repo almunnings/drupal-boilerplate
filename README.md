@@ -12,6 +12,12 @@
 lando start
 ```
 
+### Logging in
+
+```bash
+lando drush uli
+```
+
 ### Using NPM
 
 ```bash
@@ -25,13 +31,13 @@ lando theme install
 lando theme run dev
 ```
 
-And to build for production
+### Building theme for production
 
 ```bash
 lando theme run build
 ```
 
-### Configuring node domain
+### Configuring node domain (local dev HMR)
 
 ```yml
 proxy:
@@ -43,7 +49,7 @@ proxy:
 
 ### How do I override Lando locally?
 
-Create `/.lando.local.yml` file for local development.
+Create `/.lando.local.yml` file for local development. See [docs](https://docs.lando.dev/core/v3/#override-file).
 
 ### How can I connect to the database?
 
@@ -59,9 +65,7 @@ Get database host and port:
 lando info -s database --path "0.external_connection" --format table
 ```
 
-### How can I test email?
-
-Use MailHog
+### How can I test email? Use MailHog.
 
 ```bash
 lando info -s mailhog --path "0.urls"
@@ -79,9 +83,9 @@ When installing the given `composer.json` some tasks are taken care of:
 - Creates the `web/sites/default/files` directory.
 - Latest version of drush is installed locally for use at `vendor/bin/drush`.
 
-### Should I commit the contrib modules I download?
+### Should I commit the contrib modules or themese I download?
 
-Composer recommends **no**. They provide [argumentation against but also workarounds if a project decides to do it anyway](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).
+No.
 
 ### How can I apply patches to downloaded modules?
 

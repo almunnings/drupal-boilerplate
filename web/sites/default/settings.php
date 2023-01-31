@@ -17,6 +17,24 @@ $settings['file_public_path'] = getenv('DRUPAL_PUBLIC_DIR') ?: 'sites/default/fi
 $settings['file_private_path'] = getenv('DRUPAL_PRIVATE_DIR') ?: 'sites/default/files/private';
 $config['system.file']['path']['temporary'] = getenv('DRUPAL_TMP_DIR') ?: getenv('TMP');
 
+// Enable all reverse proxies.
+$settings['reverse_proxy'] = TRUE;
+
+// Trusted Host Patterns.
+$trusted_hosts = getenv('DRUPAL_TRUSTED_HOSTS') ?: '.*';
+$settings['trusted_host_patterns'] = array_map('trim', explode(',', $trusted_hosts));
+
+// Hash salt.
+$settings['hash_salt'] = hash('sha256', getenv('DRUPAL_HASH_SALT') ?: getenv('MARIADB_HOST'));
+
+// Disable error display.
+$config['system.logging']['error_level'] = 'hide';
+
+// Page performance defaults.
+$config['system.performance']['css']['preprocess'] = TRUE;
+$config['system.performance']['js']['preprocess'] = TRUE;
+$config['system.performance']['cache']['page']['max_age'] = 600;
+
 // Database connection.
 $databases['default']['default'] = [
   'driver' => 'mysql',
@@ -30,27 +48,6 @@ $databases['default']['default'] = [
     'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
   ],
 ];
-
-// Enable all reverse proxies.
-$settings['reverse_proxy'] = TRUE;
-
-// Trusted Host Patterns.
-$settings['trusted_host_patterns'][] = '.*';
-
-// Hash salt.
-$settings['hash_salt'] = hash('sha256', getenv('HASH_SALT') ?: getenv('MARIADB_HOST'));
-
-/**
- * Default production config.
- */
-
-// Disable error display.
-$config['system.logging']['error_level'] = 'hide';
-
-// Page performance defaults.
-$config['system.performance']['css']['preprocess'] = TRUE;
-$config['system.performance']['js']['preprocess'] = TRUE;
-$config['system.performance']['cache']['page']['max_age'] = 600;
 
 /**
  * Load services definition file.

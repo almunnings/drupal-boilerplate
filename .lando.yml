@@ -13,13 +13,15 @@ config:
 
 proxy:
   node:
+    # This will need to be changed if you want to use HMR for Vite
+    # drupal-boilerplate should be changed to whatever "name:" is.
     - "node.drupal-boilerplate.lndo.site:3000"
 
 services:
-  # Use official mariadb for arm64 speed/support.
-  # https://github.com/bitnami/charts/issues/7305
-  # https://github.com/lando/lando/issues/2688
   database:
+    # Use official mariadb for arm64 speed/support.
+    # https://github.com/bitnami/charts/issues/7305
+    # https://github.com/lando/lando/issues/2688
     app_mount: false
     type: compose
     volumes:
@@ -36,6 +38,7 @@ services:
         - mariadb:/var/lib/mysql
 
   mailhog:
+    # Mailhot is a test service for email.
     type: mailhog
     app_mount: false
     portforward: true
@@ -43,6 +46,8 @@ services:
       - appserver
 
   node:
+    # Package up node for development of themes and testing.
+    # Currently Lando does not support Node 18 build-in.
     type: node:custom
     ssl: true
     sslExpose: false
@@ -66,11 +71,12 @@ tooling:
 
 events:
   post-start:
+    # Wait for database then install Drupal from config.
     - appserver: >
         until drush sql:query ';'>/dev/null 2>&1; do
           echo "Waiting for database..."; sleep 1;
         done
 
         if ! drush status --field=bootstrap | grep -qi "successful"; then
-          drush si --existing-config --account-name=admin --account-pass=password -y;
+          drush si --existing-config --account-name=admin -y;
         fi
