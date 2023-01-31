@@ -58,7 +58,6 @@ services:
         - mariadb:/var/lib/mysql
 
   mailhog:
-    # Mailhot is a test service for email.
     type: mailhog
     app_mount: false
     portforward: true
@@ -66,14 +65,10 @@ services:
       - appserver
 
   node:
-    # Package up node for development of themes and testing.
-    # Currently Lando does not support Node 18 built-in.
-    type: node:custom
+    type: node:18
     ssl: true
     sslExpose: false
     port: 3000
-    overrides:
-      image: node:18-alpine
 
 events:
   post-start:
