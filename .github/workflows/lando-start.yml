@@ -10,23 +10,20 @@ on:
 
 jobs:
   lando-tests:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     env:
       TERM: xterm
 
     strategy:
-      fail-fast: false
       matrix:
         lando-versions:
           - 3.11.0
-        os:
-          - ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Grab latest edge Lando CLI
+      - name: Download Lando CLI
         run: |
           sudo curl -fsSL -o /usr/local/bin/lando "https://github.com/lando/cli/releases/download/v${{ matrix.lando-versions }}/lando-linux-x64-v${{ matrix.lando-versions }}"
           sudo chmod +x /usr/local/bin/lando
