@@ -32,9 +32,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.lando/cache
-          key: ${{ runner.os }}-lando-${{ matrix.lando.versions }}-${{ github.ref }}
+          key: ${{ runner.os }}-lando-${{ matrix.lando-versions }}-${{ github.ref }}
           restore-keys: |
-            ${{ runner.os }}-lando-${{ matrix.lando.versions }}-
+            ${{ runner.os }}-lando-${{ matrix.lando-versions }}-
 
       - name: Start Lando
         run: lando start
