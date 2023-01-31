@@ -11,7 +11,7 @@
 // Import sensible Drupal defaults.
 include __DIR__ . "/default.settings.php";
 
-// If no ENVIRONMENT_TYPE is defined, set to development in Lando or production by default.
+// Set to development in Lando or production by default.
 if (!getenv('ENVIRONMENT_TYPE')) {
   putenv('ENVIRONMENT_TYPE=' . (getenv('LANDO') ? 'development' : 'production'));
 }
@@ -57,7 +57,7 @@ $databases['default']['default'] = [
 /**
  * Load services definition file.
  *
- * services.development.yml is loaded for lando & development environments.
+ * Services.development.yml is loaded for lando & development environments.
  * settings.development.php is loaded for lando & development environments.
  *
  * services.local.php is loaded last for all envs. Do not commit this file.

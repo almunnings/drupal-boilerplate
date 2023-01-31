@@ -16,7 +16,7 @@ if (getenv('LANDO')) {
   // Don't chmod settings and uploads.
   $settings['skip_permissions_hardening'] = TRUE;
 
-  // Use the null cache backend enabled in services.development.yml
+  // Use the null cache backend enabled in services.development.yml.
   $settings['cache']['bins']['render'] = 'cache.backend.null';
   $settings['cache']['bins']['page'] = 'cache.backend.null';
   $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
