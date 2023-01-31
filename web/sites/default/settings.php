@@ -54,16 +54,21 @@ $config['system.performance']['cache']['page']['max_age'] = 600;
 
 /**
  * Load services definition file.
+ *
+ * Services.development.yml is loaded for lando & development environments.
+ * settings.development.php is loaded for lando & development environments.
+ *
+ * services.local.php is loaded last for all envs. Do not commit this file.
+ * settings.local.php is loaded last for all envs. Do not commit this file.
  */
 
-$environment = getenv('ENVIRONMENT_TYPE');
+$envs = ['local'];
 
-if (!$environment && getenv('LANDO')) {
-  $environment = 'development';
+if (getenv('ENVIRONMENT_TYPE') === 'development' || getenv('LANDO')) {
+  array_unshift($envs, 'development');
 }
 
-// Environment specific settings & services files.
-foreach ([$environment ?: 'production', 'local'] as $env) {
+foreach ($envs as $env) {
   if (file_exists(__DIR__ . '/settings.' . $env . '.php')) {
     include __DIR__ . '/settings.' . $env . '.php';
   }
