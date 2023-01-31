@@ -22,8 +22,8 @@ if (getenv('LANDO')) {
 }
 else {
   // Shield credentials.
-  $config['shield.settings']['shield_enable'] = TRUE;
+  $config['shield.settings']['shield_enable'] = getenv('SHIELD_USERNAME') && getenv('SHIELD_PASSWORD');
   $config['shield.settings']['credentials']['shield']['user'] = getenv('SHIELD_USERNAME');
   $config['shield.settings']['credentials']['shield']['pass'] = getenv('SHIELD_PASSWORD');
-  $config['shield.settings']['print'] = 'Shield.';
+  $config['shield.settings']['print'] = 'Login';
 }

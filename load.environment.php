@@ -10,12 +10,5 @@
 
 use Dotenv\Dotenv;
 
-$envs = [
-  '.env.defaults',
-  '.env',
-];
-
-foreach ($envs as $env) {
-  $dotenv = Dotenv::createUnsafeImmutable(__DIR__, $env);
-  $dotenv->safeLoad();
-}
+$dotenv = Dotenv::createUnsafeImmutable(__DIR__);
+$dotenv->safeLoad();
