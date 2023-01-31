@@ -31,6 +31,10 @@ lando theme install
 lando theme run dev
 ```
 
+Clear Drupal cache to start using Vite HMR.
+
+If you have issues loadin gthe CSS/JS, chekc your certificates are allowed: https://docs.lando.dev/core/v3/security.html
+
 ### Building theme for production
 
 ```bash
