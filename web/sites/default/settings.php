@@ -30,7 +30,7 @@ $settings['hash_salt'] = hash('sha256', getenv('DRUPAL_HASH_SALT') ?: getenv('MA
 // Disable error display.
 $config['system.logging']['error_level'] = 'hide';
 
-// Page performance defaults.
+// Page performance defaults. 10 mins.
 $config['system.performance']['css']['preprocess'] = TRUE;
 $config['system.performance']['js']['preprocess'] = TRUE;
 $config['system.performance']['cache']['page']['max_age'] = 600;

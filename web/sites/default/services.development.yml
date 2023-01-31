@@ -1,13 +1,22 @@
 # Development services.
+#
+# This file is loaded in development environemnts.
+
 parameters:
   http.response.debug_cacheability_headers: true
+
   twig.config:
+    # Ideal settings for theme development.
     debug: true
     auto_reload: true
     cache: false
+
   cors.config:
+    # Enable CORS for local headless development.
+    # Expand to branch domains as needed. Eg #.au2\.amazee\.io$#
     allowedOriginsPatterns: ['#\.lndo\.site$#', '#localhost:\d+$#']
 
 services:
+  # Creates a "null" backend for cache to ignore cache completely.
   cache.backend.null:
     class: Drupal\Core\Cache\NullBackendFactory
