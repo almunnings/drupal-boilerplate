@@ -11,11 +11,6 @@ config:
   build:
     - composer install --profile
 
-proxy:
-  node:
-    # Change drupal-boilerplate to match "name:" when renaming project.
-    - "node.drupal-boilerplate.lndo.site:3000"
-
 tooling:
   drush:
     cmd: /bin/sh -c "drush --root=$LANDO_WEBROOT --uri=https://$LANDO_APP_NAME.lndo.site $@" "$0"
@@ -69,6 +64,10 @@ services:
     sslExpose: false
     port: 3000
     scanner: false
+
+proxy:
+  node:
+    - node.drupal-boilerplate.lndo.site:3000
 
 events:
   post-start:
