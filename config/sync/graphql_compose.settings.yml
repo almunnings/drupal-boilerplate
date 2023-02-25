@@ -1,0 +1,5 @@
+entities:
+  user:
+    enabled: true
+    query_load_enabled: true
+    edges_enabled: false

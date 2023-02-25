@@ -5,7 +5,7 @@ recipe: drupal10
 config:
   php: 8.1
   composer_version: 2.5.1
-  database: mariadb:custom
+  database: mariadb
   via: nginx
   webroot: web
   build:
@@ -36,25 +36,6 @@ services:
   #   overrides:
   #     environment:
   #       ENVIRONMENT_TYPE: production
-
-  database:
-    # Use official mariadb for arm64 speed/support.
-    # https://github.com/bitnami/charts/issues/7305
-    # https://github.com/lando/lando/issues/2688
-    app_mount: false
-    type: compose
-    volumes:
-      mariadb: {}
-    services:
-      image: mariadb:10.6
-      command: docker-entrypoint.sh mariadbd
-      environment:
-        MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
-        MARIADB_DATABASE: drupal10
-        MARIADB_USER: drupal10
-        MARIADB_PASSWORD: drupal10
-      volumes:
-        - mariadb:/var/lib/mysql
 
   mailhog:
     type: mailhog
