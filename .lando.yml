@@ -5,8 +5,8 @@ recipe: drupal10
 config:
   php: 8.1
   composer_version: 2.5.1
-  database: mariadb
-  via: nginx
+  database: mariadb:10.6.12-debian-11-r5
+  via: nginx:custom
   webroot: web
   build:
     - composer install --profile
@@ -36,6 +36,10 @@ services:
   #   overrides:
   #     environment:
   #       ENVIRONMENT_TYPE: production
+
+  appserver_nginx:
+    overrides:
+      image: bitnami/nginx:1.23.3-debian-11-r29
 
   mailhog:
     type: mailhog
