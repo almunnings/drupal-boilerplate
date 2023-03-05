@@ -6,6 +6,8 @@
 
 - [Lando 3.11+](https://docs.lando.dev/basics/installation.html#system-requirements)
 
+If you plan to use a HMR theme via the lando proxy, you need to trust your [Lando SSL certificates](https://docs.lando.dev/core/v3/security.html#trusting-the-ca).
+
 ## Local environment setup
 
 ```bash
@@ -31,9 +33,7 @@ lando theme install
 lando theme run dev
 ```
 
-Clear Drupal cache to start using Vite HMR.
-
-If you have issues loading the CSS/JS, check your certificates are allowed: https://docs.lando.dev/core/v3/security.html
+**Clear Drupal cache** to start using Vite HMR.
 
 ### Building theme for production
 
