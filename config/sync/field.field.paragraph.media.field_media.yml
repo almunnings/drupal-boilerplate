@@ -10,12 +10,6 @@ dependencies:
     - media.type.remote_video
     - media.type.video
     - paragraphs.paragraphs_type.media
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
 id: paragraph.media.field_media
 field_name: field_media
 entity_type: paragraph

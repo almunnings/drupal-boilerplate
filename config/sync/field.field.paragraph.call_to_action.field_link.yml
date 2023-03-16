@@ -6,12 +6,7 @@ dependencies:
     - field.storage.paragraph.field_link
     - paragraphs.paragraphs_type.call_to_action
   module:
-    - graphql_compose
     - link
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
 id: paragraph.call_to_action.field_link
 field_name: field_link
 entity_type: paragraph

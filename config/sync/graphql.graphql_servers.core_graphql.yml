@@ -12,5 +12,6 @@ batching: true
 disable_introspection: false
 query_depth: null
 query_complexity: null
-schema_configuration: {  }
+schema_configuration:
+  graphql_compose: {  }
 persisted_queries_settings: {  }

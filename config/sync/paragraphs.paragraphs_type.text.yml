@@ -4,13 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:c02185e0-0725-4d15-a3df-f90410095bfd'
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: text
 label: Text
 icon_uuid: c02185e0-0725-4d15-a3df-f90410095bfd

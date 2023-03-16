@@ -4,13 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:2cb62a94-2d90-4a18-8fc4-e04ff4f862d8'
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: table
 label: Table
 icon_uuid: 2cb62a94-2d90-4a18-8fc4-e04ff4f862d8

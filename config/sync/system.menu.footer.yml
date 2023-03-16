@@ -1,13 +1,7 @@
 uuid: f2540608-8c91-499f-977a-84dda27a1b02
 langcode: en
 status: true
-dependencies:
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
+dependencies: {  }
 _core:
   default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer

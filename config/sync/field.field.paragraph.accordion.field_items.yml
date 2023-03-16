@@ -11,11 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
 id: paragraph.accordion.field_items
 field_name: field_items
 entity_type: paragraph

@@ -1,13 +1,7 @@
 uuid: 429a2283-7b91-4897-ad5a-5d049f89e634
 langcode: en
 status: true
-dependencies:
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
+dependencies: {  }
 _core:
   default_config_hash: LswCVLg8z4Zk1u6pV1Dpj1qUj5YY2CQ7_ojx7bJQ8qk
 name: wide

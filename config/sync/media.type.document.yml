@@ -1,14 +1,7 @@
 uuid: bc773d48-063b-4413-b79a-93e82e496c1c
 langcode: en
 status: true
-dependencies:
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
+dependencies: {  }
 _core:
   default_config_hash: _D9q3XSnP6ik9we9UuoTvZsQKPuYNp_G9PfwVtWzgnQ
 id: document

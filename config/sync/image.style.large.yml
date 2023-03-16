@@ -1,13 +1,7 @@
 uuid: 453fb70e-193c-414d-b2f9-87090255b8c7
 langcode: en
 status: true
-dependencies:
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
+dependencies: {  }
 _core:
   default_config_hash: J2n0RpFzS0-bgSyxjs6rSdgxB1rb-bTAgqywNx_964M
 name: large

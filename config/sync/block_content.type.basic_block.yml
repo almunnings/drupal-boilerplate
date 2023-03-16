@@ -1,14 +1,7 @@
 uuid: 12e79af8-d402-48cb-9331-033a737f1c2d
 langcode: en
 status: true
-dependencies:
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
+dependencies: {  }
 id: basic_block
 label: 'Basic block'
 revision: 1

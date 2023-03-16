@@ -7,15 +7,11 @@ dependencies:
     - paragraphs.paragraphs_type.call_to_action
   module:
     - allowed_formats
-    - graphql_compose
     - text
 third_party_settings:
   allowed_formats:
     allowed_formats:
       - basic_html
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
 id: paragraph.call_to_action.field_text
 field_name: field_text
 entity_type: paragraph

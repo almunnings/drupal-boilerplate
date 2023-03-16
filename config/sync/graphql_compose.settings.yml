@@ -1,5 +1,155 @@
-entities:
+user:
   user:
     enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+paragraph:
+  accordion:
+    enabled: false
+    query_load_enabled: false
+    edges_enabled: false
+  block:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  section:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  text:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  table:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  quote:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  media:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  call_to_action:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+menu:
+  main:
+    enabled: true
+  footer:
+    enabled: true
+field_config:
+  paragraph:
+    block:
+      field_feature:
+        enabled: true
+      field_block:
+        enabled: true
+    accordion:
+      field_items:
+        enabled: true
+      field_title:
+        enabled: true
+    text:
+      field_text:
+        enabled: true
+    table:
+      field_table:
+        enabled: true
+      field_title:
+        enabled: true
+    quote:
+      field_citation:
+        enabled: true
+      field_text:
+        enabled: true
+      field_link:
+        enabled: true
+    media:
+      field_description:
+        enabled: true
+      field_title:
+        enabled: true
+      field_media:
+        enabled: true
+    call_to_action:
+      field_link:
+        enabled: true
+      field_title:
+        enabled: true
+      field_text:
+        enabled: true
+  media:
+    video:
+      field_media_video_file:
+        enabled: true
+    audio:
+      field_media_audio_file:
+        enabled: true
+    document:
+      field_media_document:
+        enabled: true
+    image:
+      field_media_image:
+        enabled: true
+    remote_video:
+      field_media_oembed_video:
+        enabled: true
+  node:
+    page:
+      field_content:
+        enabled: true
+  block_content:
+    another_type:
+      body:
+        enabled: true
+    basic_block:
+      body:
+        enabled: true
+image_style:
+  large:
+    enabled: true
+  medium:
+    enabled: true
+  thumbnail:
+    enabled: true
+  wide:
+    enabled: true
+media:
+  video:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  remote_video:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  image:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  document:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  audio:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+node:
+  page:
+    enabled: true
     query_load_enabled: true
+    edges_enabled: true
+block_content:
+  another_type:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  basic_block:
+    enabled: true
+    query_load_enabled: false
     edges_enabled: false

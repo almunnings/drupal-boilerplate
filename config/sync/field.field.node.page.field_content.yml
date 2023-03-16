@@ -15,11 +15,6 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
 id: node.page.field_content
 field_name: field_content
 entity_type: node
@@ -47,9 +42,6 @@ settings:
       accordion:
         weight: -13
         enabled: true
-      accordion_item:
-        weight: -11
-        enabled: false
       block:
         weight: -14
         enabled: true

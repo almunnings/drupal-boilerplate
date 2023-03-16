@@ -5,12 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_feature
     - paragraphs.paragraphs_type.block
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
 id: paragraph.block.field_feature
 field_name: field_feature
 entity_type: paragraph

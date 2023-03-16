@@ -4,13 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:1b40f743-379c-4e0d-a597-f59389d4ee1b'
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: accordion
 label: Accordion
 icon_uuid: 1b40f743-379c-4e0d-a597-f59389d4ee1b

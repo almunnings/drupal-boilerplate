@@ -5,13 +5,7 @@ dependencies:
   content:
     - 'file:file:20f7831d-2972-4c05-967d-03ba024642bc'
   module:
-    - graphql_compose
     - layout_paragraphs
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: section
 label: Section
 icon_uuid: 20f7831d-2972-4c05-967d-03ba024642bc

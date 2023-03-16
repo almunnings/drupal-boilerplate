@@ -4,13 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:89d7b1e1-2932-4a5a-ac4f-ee695e99a628'
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: quote
 label: Quote
 icon_uuid: 89d7b1e1-2932-4a5a-ac4f-ee695e99a628

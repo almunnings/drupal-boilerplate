@@ -7,15 +7,11 @@ dependencies:
     - paragraphs.paragraphs_type.media
   module:
     - allowed_formats
-    - graphql_compose
     - text
 third_party_settings:
   allowed_formats:
     allowed_formats:
       - basic_html
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
 id: paragraph.media.field_description
 field_name: field_description
 entity_type: paragraph

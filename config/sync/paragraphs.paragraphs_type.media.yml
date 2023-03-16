@@ -4,13 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:2bd14a53-afd3-43bb-b39d-5065e80ce660'
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: media
 label: Media
 icon_uuid: 2bd14a53-afd3-43bb-b39d-5065e80ce660

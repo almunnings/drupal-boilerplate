@@ -4,13 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:0fe19f28-c92c-453a-beb8-64e6c2d85b8d'
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: call_to_action
 label: 'Call to action'
 icon_uuid: 0fe19f28-c92c-453a-beb8-64e6c2d85b8d

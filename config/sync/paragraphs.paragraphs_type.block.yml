@@ -4,13 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:124fe355-bd0e-472b-bcfb-da4f31ee1ad6'
-  module:
-    - graphql_compose
-third_party_settings:
-  graphql_compose:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
 id: block
 label: Block
 icon_uuid: 124fe355-bd0e-472b-bcfb-da4f31ee1ad6
