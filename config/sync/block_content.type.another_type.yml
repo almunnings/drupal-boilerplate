@@ -5,4 +5,4 @@ dependencies: {  }
 id: another_type
 label: 'Another Type'
 revision: 0
-description: ''
+description: 'Another example block type for testing of Unions in GraphQL.'
