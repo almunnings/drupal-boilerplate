@@ -103,6 +103,8 @@ field_config:
     page:
       field_content:
         enabled: true
+      field_metatags:
+        enabled: true
   block_content:
     another_type:
       body:

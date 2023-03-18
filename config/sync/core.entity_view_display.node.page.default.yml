@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_content
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - layout_paragraphs
@@ -27,4 +28,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_metatags: true
   links: true

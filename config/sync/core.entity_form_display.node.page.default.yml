@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_content
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - layout_paragraphs
+    - metatag
     - path
 id: node.page.default
 targetEntityType: node
@@ -28,6 +30,14 @@ content:
       nesting_depth: 0
       require_layouts: 1
       empty_message: ''
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 7
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   path:
     type: path
@@ -75,7 +85,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
