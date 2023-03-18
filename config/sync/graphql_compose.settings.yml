@@ -64,10 +64,11 @@ field_config:
     quote:
       field_citation:
         enabled: true
-      field_text:
-        enabled: true
       field_link:
         enabled: true
+      field_text:
+        enabled: true
+        name_sdl: quote
     media:
       field_description:
         enabled: true
