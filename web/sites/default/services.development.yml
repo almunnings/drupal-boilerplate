@@ -11,10 +11,36 @@ parameters:
     auto_reload: true
     cache: false
 
+  # Configure Cross-Site HTTP requests (CORS).
+  # See https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
   cors.config:
+    enabled: true
+
+    # Specify allowed headers, like 'x-allowed-header'.
+    allowedHeaders:
+      [
+        "x-csrf-token",
+        "content-type",
+        "authorization",
+        "origin",
+        "accept",
+        "x-requested-with",
+      ]
+
+    # Specify allowed request methods, specify ['*'] to allow all possible ones.
+    allowedMethods: ["*"]
+
     # Enable CORS for local headless development.
-    # Expand to branch domains as needed. Eg #.au2\.amazee\.io$#
     allowedOriginsPatterns: ['#\.lndo\.site$#', '#localhost:\d+$#']
+
+    # Sets the Access-Control-Expose-Headers header.
+    exposedHeaders: false
+
+    # Sets the Access-Control-Max-Age header.
+    maxAge: 0
+
+    # Sets the Access-Control-Allow-Credentials header.
+    supportsCredentials: true
 
 services:
   # Creates a "null" backend for cache to ignore cache completely.
