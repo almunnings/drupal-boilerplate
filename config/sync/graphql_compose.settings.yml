@@ -110,6 +110,8 @@ field_config:
         enabled: true
       field_metatags:
         enabled: true
+      field_tags:
+        enabled: true
   block_content:
     another_type:
       body:
@@ -117,14 +119,22 @@ field_config:
     basic_block:
       body:
         enabled: true
+  taxonomy_term:
+    tags: {  }
 image_style:
+  large_2x:
+    enabled: true
   large:
+    enabled: true
+  medium_2x:
     enabled: true
   medium:
     enabled: true
-  thumbnail:
-    enabled: true
   wide:
+    enabled: true
+  wide_2x:
+    enabled: true
+  thumbnail:
     enabled: true
 media:
   video:
@@ -158,6 +168,11 @@ block_content:
     query_load_enabled: false
     edges_enabled: false
   basic_block:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+taxonomy_term:
+  tags:
     enabled: true
     query_load_enabled: false
     edges_enabled: false

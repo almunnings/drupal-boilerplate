@@ -1,0 +1,15 @@
+uuid: 773ffb49-d7ee-4ac8-b4a5-61f9d303cd8f
+langcode: en
+status: true
+dependencies: {  }
+name: medium_2x
+label: 'Medium 2x (612x612)'
+effects:
+  f0e4082c-52a0-4d7c-8ff2-756c0eb2da62:
+    uuid: f0e4082c-52a0-4d7c-8ff2-756c0eb2da62
+    id: image_scale
+    weight: 1
+    data:
+      width: 612
+      height: 612
+      upscale: false

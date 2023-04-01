@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_content
     - field.field.node.page.field_metatags
+    - field.field.node.page.field_tags
     - node.type.page
   module:
     - layout_paragraphs
@@ -26,6 +27,14 @@ content:
       empty_message: ''
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   field_metatags: true

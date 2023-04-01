@@ -7,7 +7,7 @@ label: 'Core GraphQL'
 endpoint: /graphql
 debug_flag: 2
 schema: graphql_compose
-caching: true
+caching: false
 batching: true
 disable_introspection: false
 query_depth: null

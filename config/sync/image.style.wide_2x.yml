@@ -1,0 +1,15 @@
+uuid: 2dfb358c-66c8-4ae8-8553-40ec90af1b26
+langcode: en
+status: true
+dependencies: {  }
+name: wide_2x
+label: 'Wide 2x (2592)'
+effects:
+  471a3ec1-f4e0-4baf-927d-57ed1ec3d94a:
+    uuid: 471a3ec1-f4e0-4baf-927d-57ed1ec3d94a
+    id: image_scale
+    weight: 1
+    data:
+      width: 2592
+      height: null
+      upscale: false
