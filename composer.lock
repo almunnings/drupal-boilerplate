@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8be0884933eb3500297c336c04721360",
+    "content-hash": "4b40f8e99a2da78c1edd0aa482bdd66c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2573,11 +2573,17 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "dev-6.0.x",
+            "version": "6.0.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "285a3aa50db9f04ae97902887b0f169be827699e"
+                "reference": "6.0.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/linkit-6.0.0-beta4.zip",
+                "reference": "6.0.0-beta4",
+                "shasum": "94274f0af2315ca91d9be8fc4e5103c9566860f0"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10"
@@ -2588,15 +2594,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-6.0.x": "6.0.x-dev"
-                },
                 "drupal": {
-                    "version": "6.0.0-beta4+2-dev",
-                    "datestamp": "1678482547",
+                    "version": "6.0.0-beta4",
+                    "datestamp": "1678030708",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3119,26 +3122,29 @@
         },
         {
             "name": "drupal/typed_data",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/typed_data.git",
-                "reference": "fefd97f6f0a4da282f6bc66695d78010c96434e6"
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/typed_data-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "e0aa651b129d8dcd765ca49cba8682ebe09e6e73"
             },
             "require": {
                 "drupal/core": "^9.1 || ^10"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.0-beta1+20-dev",
-                    "datestamp": "1678944501",
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1679429196",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -12304,8 +12310,8 @@
         "drupal/gin": 10,
         "drupal/gin_toolbar": 10,
         "drupal/graphql_compose": 20,
-        "drupal/linkit": 20,
-        "drupal/typed_data": 20,
+        "drupal/linkit": 10,
+        "drupal/typed_data": 10,
         "drupal/webform": 10
     },
     "prefer-stable": false,
