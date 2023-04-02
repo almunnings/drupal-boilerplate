@@ -103,7 +103,7 @@ field_config:
     remote_video:
       field_media_oembed_video:
         enabled: true
-        name_sdl: oembed
+        name_sdl: url
   node:
     page:
       field_content:
