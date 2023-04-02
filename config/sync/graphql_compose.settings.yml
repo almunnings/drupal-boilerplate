@@ -162,6 +162,7 @@ node:
     enabled: true
     query_load_enabled: true
     edges_enabled: true
+    routes_enabled: true
 block_content:
   another_type:
     enabled: true
