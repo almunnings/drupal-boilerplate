@@ -37,6 +37,7 @@ module:
   graphql_compose_metatags: 0
   graphql_compose_routes: 0
   graphql_compose_users: 0
+  graphql_compose_views: 0
   help: 0
   image: 0
   layout_discovery: 0
