@@ -5,9 +5,9 @@ dependencies: {  }
 name: core_graphql
 label: 'Core GraphQL'
 endpoint: /graphql
-debug_flag: 2
+debug_flag: 1
 schema: graphql_compose
-caching: false
+caching: true
 batching: true
 disable_introspection: false
 query_depth: null

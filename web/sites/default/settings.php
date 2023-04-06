@@ -27,6 +27,8 @@ if (!getenv('ENVIRONMENT_TYPE')) {
   putenv('ENVIRONMENT_TYPE=' . (getenv('LANDO') ? 'development' : 'production'));
 }
 
+// Quick debug.
+// putenv('ENVIRONMENT_TYPE=production');.
 // Path config.
 $settings['config_sync_directory'] = getenv('DRUPAL_CONFIG_DIR') ?: '../config/sync';
 $settings['file_public_path'] = getenv('DRUPAL_PUBLIC_DIR') ?: 'sites/default/files';
