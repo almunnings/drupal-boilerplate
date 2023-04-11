@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  address: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   ajax_loader: 0
@@ -30,6 +31,7 @@ module:
   graphql_compose: 0
   graphql_compose_blocks: 0
   graphql_compose_edges: 0
+  graphql_compose_fragments: 0
   graphql_compose_image_style: 0
   graphql_compose_layout_paragraphs: 0
   graphql_compose_layouts: 0

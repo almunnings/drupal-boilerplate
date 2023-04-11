@@ -6,21 +6,22 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.field_content
     - field.field.node.page.field_metatags
-    - field.field.node.page.field_tags
     - node.type.page
   module:
+    - paragraphs
     - user
 id: node.page.teaser
 targetEntityType: node
 bundle: page
 mode: teaser
 content:
-  links:
+  field_content:
+    type: paragraph_summary
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
-  field_content: true
   field_metatags: true
-  field_tags: true
+  links: true

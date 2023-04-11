@@ -110,8 +110,6 @@ field_config:
         enabled: true
       field_metatags:
         enabled: true
-      field_tags:
-        enabled: true
   block_content:
     another_type:
       body:

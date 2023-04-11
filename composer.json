@@ -30,7 +30,7 @@
                 "source": {
                     "type": "git",
                     "url": "https://git.drupalcode.org/project/graphql_compose.git",
-                    "reference": "ui-plugins"
+                    "reference": "2.0.x"
                 }
             }
         },
@@ -53,6 +53,7 @@
         "composer": ">= 2.5",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7.1",
+        "drupal/address": "^1.11",
         "drupal/admin_toolbar": "^3.2",
         "drupal/ajax_loader": "^2.1",
         "drupal/allowed_formats": "^2.0",
