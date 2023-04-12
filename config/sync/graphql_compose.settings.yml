@@ -119,6 +119,10 @@ field_config:
         enabled: true
   taxonomy_term:
     tags: {  }
+  user:
+    user:
+      user_picture:
+        enabled: true
 image_style:
   large_2x:
     enabled: true
