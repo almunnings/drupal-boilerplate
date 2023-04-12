@@ -11,6 +11,9 @@ $config['system.logging']['error_level'] = 'verbose';
 // Disable page caching.
 $config['system.performance']['cache']['page']['max_age'] = 0;
 
+// ALlow self-signed SSL certificates.
+$settings['http_client_config']['verify'] = FALSE;
+
 // Local development.
 if (getenv('LANDO')) {
   // Don't chmod settings and uploads.
