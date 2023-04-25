@@ -133,7 +133,7 @@ field_config:
         name_sdl: null
       field_text:
         enabled: true
-        name_sdl: null
+        name_sdl: quote
     table:
       field_table:
         enabled: true
