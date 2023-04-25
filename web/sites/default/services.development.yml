@@ -1,6 +1,6 @@
 # Development services.
 #
-# This file is loaded in development environemnts.
+# This file is loaded in development environments.
 
 parameters:
   http.response.debug_cacheability_headers: true

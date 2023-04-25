@@ -1,21 +1,13 @@
-uuid: 7497e9f9-2d0c-4de6-8a66-871db731e399
+uuid: 383b2064-c3b5-4864-a163-627642ca6971
 langcode: en
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.tags
-  module:
-    - text
 id: taxonomy_term.tags.default
 targetEntityType: taxonomy_term
 bundle: tags
 mode: default
-content:
-  description:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  description: true

@@ -3,32 +3,13 @@ user:
     enabled: true
     query_load_enabled: false
     edges_enabled: false
+    routes_enabled: false
 paragraph:
   accordion:
-    enabled: false
+    enabled: true
     query_load_enabled: false
     edges_enabled: false
   block:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  section:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  text:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  table:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  quote:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  media:
     enabled: true
     query_load_enabled: false
     edges_enabled: false
@@ -36,58 +17,58 @@ paragraph:
     enabled: true
     query_load_enabled: false
     edges_enabled: false
-menu:
-  main:
+  media:
     enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  quote:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  section:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  table:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+  text:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+menu:
+  admin:
+    enabled: false
+  devel:
+    enabled: false
   footer:
     enabled: true
+  main:
+    enabled: true
+  tools:
+    enabled: false
+  account:
+    enabled: false
 field_config:
-  paragraph:
-    block:
-      field_feature:
+  node:
+    page:
+      field_content:
         enabled: true
-      field_block:
+        name_sdl: null
+      field_metatags:
         enabled: true
-    accordion:
-      field_items:
+        name_sdl: null
+  block_content:
+    another_type:
+      body:
         enabled: true
-      field_title:
+        name_sdl: null
+    basic_block:
+      body:
         enabled: true
-    text:
-      field_text:
-        enabled: true
-    table:
-      field_table:
-        enabled: true
-      field_title:
-        enabled: true
-    quote:
-      field_citation:
-        enabled: true
-      field_link:
-        enabled: true
-      field_text:
-        enabled: true
-        name_sdl: quote
-    media:
-      field_description:
-        enabled: true
-      field_title:
-        enabled: true
-      field_media:
-        enabled: true
-    call_to_action:
-      field_link:
-        enabled: true
-      field_title:
-        enabled: true
-      field_text:
-        enabled: true
+        name_sdl: null
   media:
-    video:
-      field_media_video_file:
-        enabled: true
-        name_sdl: video
     audio:
       field_media_audio_file:
         enabled: true
@@ -104,78 +85,135 @@ field_config:
       field_media_oembed_video:
         enabled: true
         name_sdl: url
-  node:
-    page:
-      field_content:
+    video:
+      field_media_video_file:
         enabled: true
-      field_metatags:
+        name_sdl: video
+  paragraph:
+    accordion:
+      field_items:
         enabled: true
-  block_content:
-    another_type:
-      body:
+        name_sdl: null
+      field_title:
         enabled: true
-    basic_block:
-      body:
+        name_sdl: null
+    block:
+      field_block:
         enabled: true
-  taxonomy_term:
-    tags: {  }
+        name_sdl: null
+      field_feature:
+        enabled: true
+        name_sdl: null
+    call_to_action:
+      field_link:
+        enabled: true
+        name_sdl: null
+      field_text:
+        enabled: true
+        name_sdl: null
+      field_title:
+        enabled: true
+        name_sdl: null
+    media:
+      field_description:
+        enabled: true
+        name_sdl: null
+      field_media:
+        enabled: true
+        name_sdl: null
+      field_title:
+        enabled: true
+        name_sdl: null
+    quote:
+      field_citation:
+        enabled: true
+        name_sdl: null
+      field_link:
+        enabled: true
+        name_sdl: null
+      field_text:
+        enabled: true
+        name_sdl: null
+    table:
+      field_table:
+        enabled: true
+        name_sdl: null
+      field_title:
+        enabled: true
+        name_sdl: null
+    text:
+      field_text:
+        enabled: true
+        name_sdl: null
   user:
     user:
       user_picture:
         enabled: true
+        name_sdl: null
 image_style:
+  large:
+    enabled: true
   large_2x:
     enabled: true
-  large:
+  media_library:
+    enabled: false
+  medium:
     enabled: true
   medium_2x:
     enabled: true
-  medium:
+  thumbnail:
     enabled: true
   wide:
     enabled: true
   wide_2x:
     enabled: true
-  thumbnail:
-    enabled: true
 media:
-  video:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  remote_video:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  image:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
-  document:
-    enabled: true
-    query_load_enabled: false
-    edges_enabled: false
   audio:
     enabled: true
     query_load_enabled: false
     edges_enabled: false
+    routes_enabled: false
+  document:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+    routes_enabled: false
+  image:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+    routes_enabled: false
+  remote_video:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+    routes_enabled: false
+  video:
+    enabled: true
+    query_load_enabled: false
+    edges_enabled: false
+    routes_enabled: false
 node:
   page:
     enabled: true
-    query_load_enabled: true
-    edges_enabled: true
+    query_load_enabled: false
+    edges_enabled: false
     routes_enabled: true
 block_content:
   another_type:
     enabled: true
     query_load_enabled: false
     edges_enabled: false
+    routes_enabled: false
   basic_block:
     enabled: true
     query_load_enabled: false
     edges_enabled: false
+    routes_enabled: false
 taxonomy_term:
   tags:
     enabled: true
     query_load_enabled: false
     edges_enabled: false
+    routes_enabled: false
+comment: {  }

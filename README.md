@@ -87,7 +87,7 @@ When installing the given `composer.json` some tasks are taken care of:
 - Creates the `web/sites/default/files` directory.
 - Latest version of drush is installed locally for use at `vendor/bin/drush`.
 
-### Should I commit the contrib modules or themese I download?
+### Should I commit the contrib modules or themes I download?
 
 No.
 

@@ -1,0 +1,20 @@
+uuid: 6ad2e6b4-0c25-4bb6-a8d9-60f52826467b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.user_picture
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  user_picture: true

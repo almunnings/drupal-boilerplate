@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.basic_html
     - node.type.page
+    - taxonomy.vocabulary.tags
   module:
     - contextual
     - devel
@@ -16,6 +17,7 @@ dependencies:
     - path
     - system
     - tablefield
+    - taxonomy
     - toolbar
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
@@ -33,13 +35,16 @@ permissions:
   - 'addrow tablefield'
   - 'create media'
   - 'create page content'
+  - 'create terms in tags'
   - 'create url aliases'
   - 'delete any page content'
   - 'delete media'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'delete terms in tags'
   - 'edit any page content'
   - 'edit own page content'
+  - 'edit terms in tags'
   - 'export tablefield'
   - 'import tablefield'
   - 'rebuild tablefield'

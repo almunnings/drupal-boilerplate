@@ -1,8 +1,8 @@
-uuid: 03502e44-a7c1-475e-b1ce-187caa3eb647
+uuid: 60c46d7f-f48e-40e8-9af5-44962459a16c
 langcode: en
 status: true
 dependencies: {  }
 name: Tags
 vid: tags
-description: 'Tag content to group it together.'
+description: Tags
 weight: 0

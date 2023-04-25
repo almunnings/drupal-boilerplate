@@ -1,24 +1,14 @@
-uuid: cde8f312-5041-442b-81bf-eec7ca3b8d3e
+uuid: 7fa486a1-1525-4657-b532-8b4142105a83
 langcode: en
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.tags
-  module:
-    - text
 id: taxonomy_term.tags.default
 targetEntityType: taxonomy_term
 bundle: tags
 mode: default
 content:
-  description:
-    type: text_textarea
-    weight: 1
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0
@@ -27,12 +17,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 2
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
 hidden:
+  description: true
   path: true
+  status: true
