@@ -40,22 +40,22 @@ paragraph:
 menu:
   admin:
     enabled: false
-    route_entity_enabled: false
+    menu_route_enabled: false
   devel:
     enabled: false
-    route_entity_enabled: false
+    menu_route_enabled: false
   footer:
     enabled: true
-    route_entity_enabled: false
+    menu_route_enabled: false
   main:
     enabled: true
-    route_entity_enabled: false
+    menu_route_enabled: false
   tools:
     enabled: false
-    route_entity_enabled: false
+    menu_route_enabled: false
   account:
     enabled: false
-    route_entity_enabled: false
+    menu_route_enabled: false
 field_config:
   node:
     page:
