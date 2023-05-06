@@ -49,7 +49,7 @@ menu:
     menu_route_enabled: false
   main:
     enabled: true
-    menu_route_enabled: false
+    menu_route_enabled: true
   tools:
     enabled: false
     menu_route_enabled: false
@@ -154,7 +154,7 @@ field_config:
   user:
     user:
       user_picture:
-        enabled: true
+        enabled: false
         name_sdl: null
 image_style:
   large:

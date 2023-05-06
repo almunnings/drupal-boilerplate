@@ -6,20 +6,19 @@ parameters:
 
     # Specify allowed headers, like 'x-allowed-header'.
     allowedHeaders:
-      [
-        "x-csrf-token",
-        "content-type",
-        "authorization",
-        "origin",
-        "accept",
-        "x-requested-with",
-      ]
+      - 'x-csrf-token'
+      - 'content-type'
+      - 'authorization'
+      - 'origin'
+      - 'accept'
+      - 'x-requested-with'
 
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
     allowedMethods: ["*"]
 
     # Configure requests allowed from specific origins.
-    allowedOriginsPatterns: ['#somedomain\.com\.au$#']
+    allowedOriginsPatterns:
+      - '#somedomain\.com\.au$#'
 
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false

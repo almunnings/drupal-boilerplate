@@ -22,13 +22,19 @@
 // Import sensible Drupal defaults.
 include __DIR__ . "/default.settings.php";
 
-// Set to development in Lando or production by default.
+// Local development mode.
+$is_local_dev = getenv('LANDO') === 'ON' || getenv('IS_DDEV_PROJECT') === 'true' || getenv('DEV_LOCAL') === 'true';
+
+// Toggle between development and production settings php.
 if (!getenv('ENVIRONMENT_TYPE')) {
-  putenv('ENVIRONMENT_TYPE=' . (getenv('LANDO') ? 'development' : 'production'));
+  putenv('ENVIRONMENT_TYPE=' . ($is_local_dev ? 'development' : 'production'));
 }
 
-// Quick debug.
-// putenv('ENVIRONMENT_TYPE=production');.
+// Enable specific settings for local development.
+if (!getenv('ENVIRONMENT_LOCAL') && getenv('ENVIRONMENT_TYPE') !== 'production') {
+  putenv('ENVIRONMENT_LOCAL=' . ($is_local_dev ? 'true' : 'false'));
+}
+
 // Path config.
 $settings['config_sync_directory'] = getenv('DRUPAL_CONFIG_DIR') ?: '../config/sync';
 $settings['file_public_path'] = getenv('DRUPAL_PUBLIC_DIR') ?: 'sites/default/files';
@@ -68,7 +74,7 @@ $databases['default']['default'] = [
 ];
 
 // Environment specific config.
-// Add a local config in at the end for good measure.
+// Add a settings.local.php & services.local.yml at the end for good measure.
 foreach ([getenv('ENVIRONMENT_TYPE'), 'local'] as $env) {
   if (file_exists(__DIR__ . '/settings.' . $env . '.php')) {
     include __DIR__ . '/settings.' . $env . '.php';
