@@ -64,4 +64,9 @@ events:
 
         if ! drush status --field=bootstrap | grep -qi "successful"; then
           drush si --existing-config --account-name=admin -y;
+
+          # Ensure one node exists for the front page.
+          drush pm-enable devel_generate -y;
+          drush genc --bundles=page --skip-fields=field_content 1 0;
+          drush pm-uninstall devel_generate -y;
         fi
