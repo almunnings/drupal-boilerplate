@@ -25,7 +25,7 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: 'document/[random:hash:sha256]'
+  file_directory: 'media/document/[random:hash:sha256]'
   file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf odf odg odp ods odt fodt fods fodp fodg key numbers pages'
   max_filesize: ''
   description_field: true

@@ -22,7 +22,7 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: 'audio/[random:hash:sha256]'
+  file_directory: 'media/audio/[random:hash:sha256]'
   file_extensions: 'mp3 wav aac'
   max_filesize: ''
   description_field: false
