@@ -102,12 +102,9 @@ field_config:
         name_sdl: null
       field_title:
         enabled: true
-        name_sdl: null
+        name_sdl: accordionTitle
     block:
       field_block:
-        enabled: true
-        name_sdl: null
-      field_feature:
         enabled: true
         name_sdl: null
     call_to_action:

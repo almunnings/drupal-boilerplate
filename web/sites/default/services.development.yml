@@ -5,12 +5,6 @@
 parameters:
   http.response.debug_cacheability_headers: true
 
-  twig.config:
-    # Ideal settings for theme development.
-    debug: true
-    auto_reload: true
-    cache: false
-
   # Configure Cross-Site HTTP requests (CORS).
   # See https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
   cors.config:
@@ -42,8 +36,3 @@ parameters:
 
     # Sets the Access-Control-Allow-Credentials header.
     supportsCredentials: true
-
-services:
-  # Creates a "null" backend for cache to ignore cache completely.
-  cache.backend.null:
-    class: Drupal\Core\Cache\NullBackendFactory

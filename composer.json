@@ -43,8 +43,8 @@
         "drupal/ajax_loader": "^2.1",
         "drupal/allowed_formats": "^2.0",
         "drupal/block_field": "^1.0@RC",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.0",
+        "drupal/core-composer-scaffold": "^10.1@beta",
+        "drupal/core-recommended": "^10.1@beta",
         "drupal/devel": "^5.0",
         "drupal/dvb": "dev-custom",
         "drupal/field_group": "^3.4",
@@ -52,7 +52,7 @@
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/graphql": "^4.4",
-        "drupal/graphql_compose": "2.0.x-dev@dev",
+        "drupal/graphql_compose": "^2.0@beta",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/linkit": "^6.0@RC",
         "drupal/menu_link_attributes": "^1.3",
@@ -64,13 +64,13 @@
         "drupal/tablefield": "^2.4",
         "drupal/typed_data": "^1.0@beta",
         "drupal/viewfield": "^3.0@beta",
-        "drupal/webform": "^6.2@beta",
+        "drupal/webform": "6.2.x-dev@dev",
         "drush/drush": "^11",
         "oomphinc/composer-installers-extender": "^2.0",
         "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.0"
+        "drupal/core-dev": "^10.1@beta"
     },
     "conflict": {
         "drupal/drupal": "*"

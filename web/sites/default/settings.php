@@ -23,7 +23,7 @@
 include __DIR__ . "/default.settings.php";
 
 // Local development mode.
-$is_local_dev = getenv('LANDO') === 'ON' || getenv('IS_DDEV_PROJECT') === 'true' || getenv('DEV_LOCAL') === 'true';
+$is_local_dev = getenv('LANDO') === 'ON' || getenv('IS_DDEV_PROJECT') === 'true' || getenv('ENVIRONMENT_LOCAL') === 'true';
 
 // Toggle between development and production settings php.
 if (!getenv('ENVIRONMENT_TYPE')) {

@@ -21,6 +21,7 @@ settings:
   selection: blocks
   selection_settings:
     plugin_ids:
-      page_title_block: page_title_block
+      'block_content:0445e2c5-4d7a-4d16-bb8f-9942adf77830': 'block_content:0445e2c5-4d7a-4d16-bb8f-9942adf77830'
+      'block_content:3a4e3721-530f-4212-8d32-7fcb424a8ce0': 'block_content:3a4e3721-530f-4212-8d32-7fcb424a8ce0'
       system_powered_by_block: system_powered_by_block
 field_type: block_field

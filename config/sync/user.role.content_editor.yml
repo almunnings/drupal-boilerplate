@@ -39,6 +39,7 @@ permissions:
   - 'create url aliases'
   - 'delete any page content'
   - 'delete media'
+  - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
   - 'delete terms in tags'

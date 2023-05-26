@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.block.field_block
-    - field.field.paragraph.block.field_feature
     - paragraphs.paragraphs_type.block
   module:
     - block_field
@@ -20,5 +19,4 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  field_feature: true
+hidden: {  }

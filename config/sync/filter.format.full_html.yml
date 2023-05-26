@@ -86,3 +86,9 @@ filters:
     status: false
     weight: -43
     settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -45
+    settings: {  }

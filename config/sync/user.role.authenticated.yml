@@ -8,6 +8,7 @@ dependencies:
     - filter.format.restricted_html
     - filter.format.webform_default
   module:
+    - file
     - filter
     - graphql
     - media
@@ -22,6 +23,7 @@ permissions:
   - 'access content'
   - 'cancel account'
   - 'change own username'
+  - 'delete own files'
   - 'execute core_graphql arbitrary graphql requests'
   - 'use text format basic_html'
   - 'use text format full_html'
