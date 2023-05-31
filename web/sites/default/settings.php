@@ -41,6 +41,13 @@ $settings['file_public_path'] = getenv('DRUPAL_PUBLIC_DIR') ?: 'sites/default/fi
 $settings['file_private_path'] = getenv('DRUPAL_PRIVATE_DIR') ?: 'sites/default/files/private';
 $config['system.file']['path']['temporary'] = getenv('DRUPAL_TMP_DIR') ?: getenv('TMP');
 
+// Disable exporting development config.
+$settings['config_exclude_modules'] = [
+  'kint',
+  'devel',
+  'stage_file_proxy',
+];
+
 // Enable all reverse proxies.
 $settings['reverse_proxy'] = TRUE;
 
