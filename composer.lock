@@ -2801,7 +2801,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/graphql_compose.git",
-                "reference": "41548476a0c8bd3a759274cbe255b1389fb6985e"
+                "reference": "0649abc75c8f241fd68ea271f6065477469938f3"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10",
@@ -2810,15 +2810,6 @@
                 "symfony/string": "^6"
             },
             "require-dev": {
-                "drupal/core-block_content": "*",
-                "drupal/core-comment": "*",
-                "drupal/core-image": "*",
-                "drupal/core-layout_discovery": "*",
-                "drupal/core-menu_link_content": "*",
-                "drupal/core-path": "*",
-                "drupal/core-path_alias": "*",
-                "drupal/core-user": "*",
-                "drupal/core-views": "*",
                 "drupal/graphql_compose_edges": "*",
                 "drupal/graphql_compose_layouts": "*",
                 "drupal/graphql_compose_routes": "*",
@@ -2831,8 +2822,8 @@
                     "dev-2.0.x": "2.0.x-dev"
                 },
                 "drupal": {
-                    "version": "2.0.0-beta7+9-dev",
-                    "datestamp": "1685492387",
+                    "version": "2.0.0-beta7+27-dev",
+                    "datestamp": "1685931910",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3640,7 +3631,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "d8edfbc214e3676fa0ae4b4ad4e8c91632f9e418"
+                "reference": "608f35210fc797993e4afca4a6df36b33c52cc79"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10"
@@ -3691,8 +3682,8 @@
                     "dev-6.2.x": "6.2.x-dev"
                 },
                 "drupal": {
-                    "version": "6.2.0-beta5+175-dev",
-                    "datestamp": "1685439904",
+                    "version": "6.2.0-beta5+189-dev",
+                    "datestamp": "1685710369",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3888,16 +3879,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796"
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b531a2311709443320c786feb4519cfaf94af796",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
                 "shasum": ""
             },
             "require": {
@@ -3943,7 +3934,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.2.5"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.6"
             },
             "funding": [
                 {
@@ -3951,7 +3942,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-02T17:26:14+00:00"
+            "time": "2023-06-01T07:04:22+00:00"
         },
         {
             "name": "enlightn/security-checker",
