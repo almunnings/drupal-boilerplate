@@ -43,8 +43,8 @@
         "drupal/ajax_loader": "^2.1",
         "drupal/allowed_formats": "^2.0",
         "drupal/block_field": "^1.0@RC",
-        "drupal/core-composer-scaffold": "^10.1@beta",
-        "drupal/core-recommended": "^10.1@beta",
+        "drupal/core-composer-scaffold": "^10.1@RC",
+        "drupal/core-recommended": "^10.1@RC",
         "drupal/devel": "^5.0",
         "drupal/dvb": "dev-custom",
         "drupal/field_group": "^3.4",
@@ -65,12 +65,12 @@
         "drupal/typed_data": "^1.0@beta",
         "drupal/viewfield": "^3.0@beta",
         "drupal/webform": "6.2.x-dev@dev",
-        "drush/drush": "^11",
+        "drush/drush": "^12",
         "oomphinc/composer-installers-extender": "^2.0",
         "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.1@beta"
+        "drupal/core-dev": "^10.1@RC"
     },
     "conflict": {
         "drupal/drupal": "*"
