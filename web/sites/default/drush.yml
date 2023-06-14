@@ -8,6 +8,6 @@ command:
     dump:
       options:
         # Omit content of cache tables to speed up exports and imports.
-        structure-tables-list: cache,cache_*,cachetags,batch,flood,history,search_*,sessions,watchdog,feeds_log
+        structure-tables-list: cache,cache_*,cachetags,batch,flood,history,search_*,sessions,watchdog,feeds_log,key_value_expire
         # Do not write any CREATE LOGFILE GROUP or CREATE TABLESPACE statements in output.
-        extra-dump: --no-tablespaces
+        extra-dump: --no-tablespaces --quick
