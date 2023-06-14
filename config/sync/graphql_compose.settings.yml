@@ -204,3 +204,7 @@ field_config:
     user:
       user_picture:
         enabled: false
+settings:
+  schema_description: 'Beep boop I am a schema'
+  schema_version: '1'
+  simple_unions: true
