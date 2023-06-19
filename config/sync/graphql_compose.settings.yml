@@ -205,6 +205,10 @@ field_config:
       user_picture:
         enabled: false
 settings:
+  expose_entity_ids: false
   schema_description: 'Beep boop I am a schema'
   schema_version: '1'
   simple_unions: true
+  site_name: false
+  site_slogan: false
+  site_front: true
