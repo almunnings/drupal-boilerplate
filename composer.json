@@ -52,7 +52,7 @@
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/graphql": "^4.4",
-        "drupal/graphql_compose": "2.0.x-dev@dev",
+        "drupal/graphql_compose": "^2.0@beta",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/linkit": "^6.0@RC",
         "drupal/menu_link_attributes": "^1.3",
