@@ -43,7 +43,6 @@ $config['system.file']['path']['temporary'] = getenv('DRUPAL_TMP_DIR') ?: getenv
 
 // Disable exporting development config.
 $settings['config_exclude_modules'] = [
-  'kint',
   'devel',
   'stage_file_proxy',
 ];

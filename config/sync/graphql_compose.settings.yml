@@ -4,21 +4,13 @@ entity_config:
   block_content:
     another_type:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
     basic_block:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
   image_style:
     large:
       enabled: true
     large_2x:
       enabled: true
-    media_library:
-      enabled: false
     medium:
       enabled: true
     medium_2x:
@@ -32,99 +24,47 @@ entity_config:
   media:
     audio:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
     document:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
     image:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
     remote_video:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
     video:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
   menu:
-    account:
-      enabled: false
-      menu_route_enabled: false
-    admin:
-      enabled: false
-      menu_route_enabled: false
-    devel:
-      enabled: false
-      menu_route_enabled: false
     footer:
       enabled: true
-      menu_route_enabled: false
     main:
       enabled: true
       menu_route_enabled: true
-    tools:
-      enabled: false
-      menu_route_enabled: false
   node:
     page:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
       routes_enabled: true
   paragraph:
     accordion:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
     block:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
     call_to_action:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
     media:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
     quote:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
     section:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
     table:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
     text:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
   taxonomy_term:
     tags:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
   user:
     user:
       enabled: true
-      query_load_enabled: false
-      edges_enabled: false
-      routes_enabled: false
 field_config:
   block_content:
     another_type:
@@ -157,8 +97,6 @@ field_config:
   node:
     page:
       field_content:
-        enabled: true
-      field_metatags:
         enabled: true
   paragraph:
     accordion:
@@ -200,10 +138,6 @@ field_config:
     text:
       field_text:
         enabled: true
-  user:
-    user:
-      user_picture:
-        enabled: false
 settings:
   expose_entity_ids: false
   schema_description: 'Beep boop I am a schema'

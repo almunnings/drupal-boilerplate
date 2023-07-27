@@ -31,3 +31,6 @@ $settings['http_client_config']['verify'] = FALSE;
 
 // Don't chmod settings and uploads.
 $settings['skip_permissions_hardening'] = TRUE;
+
+// Ignore the simple_oauth key permissions check.
+$settings['simple_oauth.key_permissions_check'] = FALSE;
