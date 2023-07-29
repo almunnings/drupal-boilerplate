@@ -7,7 +7,7 @@
     <!-- Sensible exclude -->
     <exclude-pattern>*/node_modules/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
-    <!-- <exclude-pattern>*/contrib/*</exclude-pattern> -->
+    <exclude-pattern>*/contrib/*</exclude-pattern>
     <exclude-pattern>*/web/core/*</exclude-pattern>
 
     <!-- Limit extensions -->

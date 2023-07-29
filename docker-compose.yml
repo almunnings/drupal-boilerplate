@@ -1,0 +1,58 @@
+# This becomes COMPOSE_PROJECT_NAME
+name: drupal-boilerplate
+
+x-volumes:
+  &default-volumes
+  volumes:
+    - ./private:/app/private:delegated
+    - ./web/sites/default/files:/app/web/sites/default/files:delegated
+
+services:
+  database:
+    image: mariadb:10.9
+    env_file:
+      - .env
+    volumes:
+      - mariadb:/var/lib/mysql
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: true
+
+  cli:
+    build:
+      context: .
+      dockerfile: .docker/cli.dockerfile
+    image: &cli-image ${COMPOSE_PROJECT_NAME:-drupal}-cli
+    <<: *default-volumes
+    depends_on:
+      - database
+    env_file:
+      - .env
+
+  php:
+    build:
+      context: .
+      dockerfile: .docker/php.dockerfile
+      args:
+        CLI_IMAGE: *cli-image
+    <<: *default-volumes
+    depends_on:
+      - cli
+      - database
+    env_file:
+      - .env
+
+  nginx:
+    build:
+      context: .
+      dockerfile: .docker/nginx.dockerfile
+      args:
+        CLI_IMAGE: *cli-image
+    <<: *default-volumes
+    depends_on:
+      - cli
+      - php
+    env_file:
+      - .env
+
+volumes:
+  mariadb:

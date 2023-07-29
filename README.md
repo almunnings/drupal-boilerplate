@@ -43,10 +43,25 @@ lando theme run build
 
 ### Configuring node domain (local dev HMR)
 
+Check your [Lando SSL certificates](https://docs.lando.dev/core/v3/security.html#trusting-the-ca).
+
 ```yml
 proxy:
   node:
     - node.<< LANDO APP NAME >>.lndo.site:3000
+```
+
+## Non-lando setup
+
+There is a `docker-compose` stack here, it's mostly for reference and hosting the demo.
+
+Create a .env `cp .env.example .env` then fill in the database credentials.
+
+```bash
+cp docker-compose.override.yml.example docker-compose.override.yml
+docker-compose up
+docker-compose exec -it cli bash
+/app/vendor/bin/drush si --existing-config --account-name=admin -y;
 ```
 
 ## FAQ

@@ -34,6 +34,7 @@ node_modules
 # Local only settings
 /.env
 .lando.local.yml
+/docker-compose.override.yml
 
 # OS Annoyances
 .DS_Store
@@ -50,3 +51,4 @@ node_modules
 
 # Custom
 /.gitattributes
+/private
