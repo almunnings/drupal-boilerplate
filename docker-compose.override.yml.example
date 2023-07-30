@@ -24,6 +24,10 @@ services:
     environment:
       VIRTUAL_HOST: drupal.almunnings.com
 
+  database:
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: true
+
 volumes:
   certs:
   html:

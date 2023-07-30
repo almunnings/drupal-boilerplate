@@ -14,6 +14,7 @@ COPY .docker/php.ini /usr/local/etc/php/conf.d/zzz-custom.ini
 
 COPY composer.json composer.lock ./
 RUN composer install --no-dev --profile --no-interaction
+RUN ln -sf /app/vendor/bin/drush /usr/local/bin/drush
 
 COPY . .
 

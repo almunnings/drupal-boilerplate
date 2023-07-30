@@ -10,12 +10,10 @@ x-volumes:
 services:
   database:
     image: mariadb:10.9
-    env_file:
-      - .env
     volumes:
       - mariadb:/var/lib/mysql
-    environment:
-      MARIADB_RANDOM_ROOT_PASSWORD: true
+    env_file:
+      - .env
 
   cli:
     build:
@@ -51,8 +49,6 @@ services:
     depends_on:
       - cli
       - php
-    env_file:
-      - .env
 
 volumes:
   mariadb:

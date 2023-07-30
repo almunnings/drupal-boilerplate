@@ -60,8 +60,13 @@ Create a .env `cp .env.example .env` then fill in the database credentials.
 ```bash
 cp docker-compose.override.yml.example docker-compose.override.yml
 docker-compose up
-docker-compose exec -it cli bash
-/app/vendor/bin/drush si --existing-config --account-name=admin -y;
+docker-compose exec -it cli drush si --existing-config --account-name=admin -y
+```
+
+### Cleaning up
+
+```bash
+docker-compose down --rmi all -v --remove-orphans
 ```
 
 ## FAQ
