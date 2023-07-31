@@ -1,5 +1,7 @@
-# Attach nginx to port 80 on local.
+# This becomes COMPOSE_PROJECT_NAME
+name: drupal-boilerplate
 
+# Attach nginx to port 80 on local.
 services:
   nginx:
     ports:
