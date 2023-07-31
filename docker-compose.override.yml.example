@@ -1,39 +1,10 @@
-# README: https://linuxhandbook.com/nginx-reverse-proxy-docker/
+# Attach nginx to port 80 on local.
 
 services:
-  reverse-proxy:
-    image: jwilder/nginx-proxy:latest
-    container_name: reverse-proxy
-    volumes:
-      - html:/usr/share/nginx/html
-      - dhparam:/etc/nginx/dhparam
-      - vhost:/etc/nginx/vhost.d
-      - certs:/etc/nginx/certs
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    restart: always
-    networks:
-      - net
+  nginx:
     ports:
       - 80:80
-      - 443:443
-
-  nginx:
-    networks:
-      - net
-      - default
-    environment:
-      VIRTUAL_HOST: drupal.almunnings.com
 
   database:
     environment:
       MARIADB_RANDOM_ROOT_PASSWORD: true
-
-volumes:
-  certs:
-  html:
-  vhost:
-  dhparam:
-
-networks:
-  default:
-  net:

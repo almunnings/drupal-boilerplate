@@ -2,13 +2,9 @@
 
 [![Lando Start](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml/badge.svg?branch=main)](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml)
 
-## Requirements
-
-- [Lando 3.11+](https://docs.lando.dev/basics/installation.html#system-requirements)
+## Local environment setup
 
 If you plan to use a HMR theme via the lando proxy, you need to trust your [Lando SSL certificates](https://docs.lando.dev/core/v3/security.html#trusting-the-ca).
-
-## Local environment setup
 
 ```bash
 lando start

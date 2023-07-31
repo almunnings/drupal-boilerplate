@@ -16,10 +16,10 @@ services:
       - .env
 
   cli:
+    image: &cli-image ${COMPOSE_PROJECT_NAME:-drupal}-cli
     build:
       context: .
       dockerfile: .docker/cli.dockerfile
-    image: &cli-image ${COMPOSE_PROJECT_NAME:-drupal}-cli
     <<: *default-volumes
     depends_on:
       - database
