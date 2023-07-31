@@ -8,12 +8,12 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  TERM: xterm
+
 jobs:
   lando:
     runs-on: ubuntu-latest
-
-    env:
-      TERM: xterm
 
     steps:
       - uses: actions/checkout@v3
@@ -50,4 +50,4 @@ jobs:
         run: docker-compose up -d --build
 
       - name: Install Drupal
-        run: docker-compose exec -it cli drush si --existing-config --account-name=admin -y
+        run: docker-compose exec -T cli drush si --existing-config --account-name=admin -y
