@@ -11,7 +11,7 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
     environment:
-      MARIADB_RANDOM_ROOT_PASSWORD: true
+      MARIADB_RANDOM_ROOT_PASSWORD: 'true'
     env_file:
       - .env
 
