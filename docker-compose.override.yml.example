@@ -4,7 +4,3 @@ services:
   nginx:
     ports:
       - 80:80
-
-  database:
-    environment:
-      MARIADB_RANDOM_ROOT_PASSWORD: true

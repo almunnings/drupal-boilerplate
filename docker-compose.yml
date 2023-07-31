@@ -12,6 +12,8 @@ services:
     image: mariadb:10.9
     volumes:
       - mariadb:/var/lib/mysql
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: true
     env_file:
       - .env
 
