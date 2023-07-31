@@ -6,28 +6,12 @@ x-volumes:
     - ./web/sites/default/files:/app/web/sites/default/files:delegated
 
 services:
-  database:
-    image: mariadb:10.9
-    volumes:
-      - mariadb:/var/lib/mysql
-    environment:
-      MARIADB_RANDOM_ROOT_PASSWORD: 'true'
-    env_file:
-      - .env
-    healthcheck:
-      test: ["CMD", "healthcheck.sh", "--su-mysql", "--connect", "--innodb_initialized"]
-      interval: 2s
-      retries: 120
-
   cli:
     image: &cli-image ${COMPOSE_PROJECT_NAME:-drupal}-cli
     build:
       context: .
       dockerfile: .docker/cli.dockerfile
     <<: *default-volumes
-    depends_on:
-      database:
-        condition: service_healthy
     env_file:
       - .env
 
@@ -40,7 +24,6 @@ services:
     <<: *default-volumes
     depends_on:
       - cli
-      - database
     env_file:
       - .env
 
@@ -54,6 +37,3 @@ services:
     depends_on:
       - cli
       - php
-
-volumes:
-  mariadb:
