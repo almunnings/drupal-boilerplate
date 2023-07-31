@@ -19,6 +19,7 @@ parameters:
     # Configure requests allowed from specific origins.
     allowedOriginsPatterns:
       - '#somedomain\.com\.au$#'
+      - '#almunnings\.com$#'
 
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
