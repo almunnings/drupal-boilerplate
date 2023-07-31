@@ -90,6 +90,7 @@ jobs:
             cd ${{ secrets.SSH_PATH }}
             git pull origin main
             docker-compose up --build -d
+            docker-compose exec -T cli drush deploy -y
 
       - name: Revoke security group IP
         run: |
