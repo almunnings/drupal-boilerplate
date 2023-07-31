@@ -1,5 +1,5 @@
 # This becomes COMPOSE_PROJECT_NAME
-name: drupal-boilerplate
+# name: drupal-boilerplate
 
 services:
   # Create a database service.
