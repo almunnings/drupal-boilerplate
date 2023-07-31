@@ -1,7 +1,6 @@
 # Drupal Boilerplate
 
-[![Lando Start](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml/badge.svg?branch=main)](https://github.com/almunnings/drupal-boilerplate/actions/workflows/lando-start.yml)
-[![Docker Compose](https://github.com/almunnings/drupal-boilerplate/actions/workflows/docker-compose.yml/badge.svg?branch=main)](https://github.com/almunnings/drupal-boilerplate/actions/workflows/docker-compose.yml)
+[![Build](https://github.com/almunnings/drupal-boilerplate/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/almunnings/drupal-boilerplate/actions/workflows/build.yml)
 
 ## Local environment setup
 

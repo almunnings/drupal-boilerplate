@@ -1,0 +1,53 @@
+name: Stack build
+
+on:
+  release:
+    types: [created]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lando:
+    runs-on: ubuntu-latest
+
+    env:
+      TERM: xterm
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download Lando CLI
+        run: |
+          sudo curl -fsSL -o /usr/local/bin/lando "https://github.com/lando/cli/releases/download/v3.11.0/lando-linux-x64-v3.11.0"
+          sudo chmod +x /usr/local/bin/lando
+
+      - name: Setup Lando cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.lando/cache
+          key: lando-3-${{ github.ref }}
+          restore-keys: |
+            lando-3-
+
+      - name: Start Lando
+        run: lando start
+
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create env
+        run: cp .env.example .env
+
+      - uses: satackey/action-docker-layer-caching@v0.0.11
+        continue-on-error: true
+
+      - name: Start containers
+        run: docker-compose up -d --build
+
+      - name: Install Drupal
+        run: docker-compose exec -it cli drush si --existing-config --account-name=admin -y
