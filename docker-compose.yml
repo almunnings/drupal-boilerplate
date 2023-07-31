@@ -14,6 +14,10 @@ services:
       MARIADB_RANDOM_ROOT_PASSWORD: 'true'
     env_file:
       - .env
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--su-mysql", "--connect", "--innodb_initialized"]
+      interval: 2s
+      retries: 120
 
   cli:
     image: &cli-image ${COMPOSE_PROJECT_NAME:-drupal}-cli
@@ -22,7 +26,8 @@ services:
       dockerfile: .docker/cli.dockerfile
     <<: *default-volumes
     depends_on:
-      - database
+      database:
+        condition: service_healthy
     env_file:
       - .env
 
