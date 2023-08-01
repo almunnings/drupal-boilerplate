@@ -6,34 +6,46 @@ x-volumes:
     - ./web/sites/default/files:/app/web/sites/default/files:delegated
 
 services:
-  cli:
-    image: &cli-image ${COMPOSE_PROJECT_NAME:-drupal}-cli
-    build:
-      context: .
-      dockerfile: .docker/cli.dockerfile
-    <<: *default-volumes
-    env_file:
-      - .env
+  database:
+    image: mariadb:10.11
+    volumes:
+      - mariadb:/var/lib/mysql
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: 'true'
+      MARIADB_DATABASE: ${MARIADB_DATABASE:-drupal10}
+      MARIADB_USER: ${MARIADB_USER:-drupal10}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD:-drupal10}
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--su-mysql", "--connect", "--innodb_initialized"]
+      interval: 2s
+      retries: 120
+
+  memcached:
+    image: memcached:1.6-alpine
+    environment:
+      MEMCACHED_MAX_ITEM_SIZE: 8388608
 
   php:
+    image: &php-image ${COMPOSE_PROJECT_NAME:-drupal}-php
     build:
       context: .
       dockerfile: .docker/php.dockerfile
-      args:
-        CLI_IMAGE: *cli-image
     <<: *default-volumes
     depends_on:
-      - cli
-    env_file:
-      - .env
+      database:
+        condition: service_healthy
+      memcached:
+        condition: service_started
 
   nginx:
     build:
       context: .
       dockerfile: .docker/nginx.dockerfile
       args:
-        CLI_IMAGE: *cli-image
+        PHP_IMAGE: *php-image
     <<: *default-volumes
     depends_on:
-      - cli
       - php
+
+volumes:
+  mariadb:

@@ -40,11 +40,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create env
-        run: |
-          cp .env.example .env
-          cp docker-compose.override.yml.example docker-compose.override.yml
-
       - name: Docker cache
         uses: satackey/action-docker-layer-caching@v0.0.11
         continue-on-error: true
@@ -53,7 +48,7 @@ jobs:
         run: docker-compose up -d --build
 
       - name: Install Drupal
-        run: docker-compose exec -T cli drush si --existing-config --account-name=admin -y
+        run: docker-compose exec -T php drush si --existing-config --account-name=admin -y
 
   deploy:
     runs-on: ubuntu-latest
@@ -92,7 +87,7 @@ jobs:
             cd ${{ secrets.SSH_PATH }}
             git pull origin main
             docker-compose up --build -d
-            docker-compose exec -T cli drush deploy -y
+            docker-compose exec -T php drush deploy -y
 
       - name: Revoke security group IP
         run: |

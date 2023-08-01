@@ -29,6 +29,8 @@ node_modules
 !/web/sites/default/drush.yml
 !/web/sites/default/settings.php
 !/web/sites/default/services.yml
+!/web/sites/default/settings.memcache.php
+!/web/sites/default/services.memcache.yml
 !/web/sites/default/settings.development.php
 !/web/sites/default/services.development.yml
 

@@ -54,9 +54,17 @@ There is a `docker-compose` stack here, it's mostly for reference and hosting th
 Create a .env `cp .env.example .env` then fill in the database credentials.
 
 ```bash
-cp docker-compose.override.yml.example docker-compose.override.yml
 docker-compose up
-docker-compose exec -it cli drush si --existing-config --account-name=admin -y
+docker-compose exec -it php drush si --existing-config --account-name=admin -y
+```
+
+To expose the site on port 80, create a `docker-compose.override.yml` file with the following:
+
+```yml
+services:
+  nginx:
+    ports:
+      - 80:80
 ```
 
 ### Cleaning up
