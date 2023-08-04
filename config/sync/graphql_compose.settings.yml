@@ -146,3 +146,4 @@ settings:
   site_name: false
   site_slogan: false
   site_front: true
+  custom: {  }
