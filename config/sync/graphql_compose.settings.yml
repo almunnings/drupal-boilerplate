@@ -146,4 +146,7 @@ settings:
   site_name: false
   site_slogan: false
   site_front: true
+  svg_image: false
+  svg_filesize: 100
   custom: {  }
+  edge_max_limit: 100
