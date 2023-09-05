@@ -2861,17 +2861,17 @@
         },
         {
             "name": "drupal/graphql_export",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/graphql_export.git",
-                "reference": "2.0.2"
+                "reference": "2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/graphql_export-2.0.2.zip",
-                "reference": "2.0.2",
-                "shasum": "9fea18c82900fa83c3496ff3cf01cf2f78e1a894"
+                "url": "https://ftp.drupal.org/files/projects/graphql_export-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "5717d22cc2e88f3ee2692ff6233d9896d4cd7182"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10",
@@ -2881,11 +2881,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.2",
-                    "datestamp": "1693362098",
+                    "version": "2.0.3",
+                    "datestamp": "1693955852",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10 || ^11"
                     }
                 }
             },
