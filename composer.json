@@ -53,6 +53,7 @@
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/graphql": "^4.4",
         "drupal/graphql_compose": "2.0.x-dev@dev",
+        "drupal/graphql_export": "^2.0",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/linkit": "^6.1",
         "drupal/memcache": "^2.5",
