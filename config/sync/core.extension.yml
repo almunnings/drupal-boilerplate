@@ -39,6 +39,7 @@ module:
   graphql_compose_routes: 0
   graphql_compose_users: 0
   graphql_compose_views: 0
+  graphql_export: 0
   help: 0
   image: 0
   layout_discovery: 0
@@ -71,6 +72,7 @@ module:
   token: 0
   toolbar: 0
   typed_data: 0
+  update: 0
   user: 0
   viewfield: 0
   views_ui: 0
