@@ -29,15 +29,12 @@ module:
   graphql: 0
   graphql_compose: 0
   graphql_compose_blocks: 0
-  graphql_compose_edges: 0
-  graphql_compose_fragments: 0
   graphql_compose_image_style: 0
   graphql_compose_layout_paragraphs: 0
   graphql_compose_layouts: 0
   graphql_compose_menus: 0
   graphql_compose_metatags: 0
   graphql_compose_routes: 0
-  graphql_compose_users: 0
   graphql_compose_views: 0
   graphql_export: 0
   help: 0

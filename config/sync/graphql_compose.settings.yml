@@ -139,9 +139,11 @@ field_config:
       field_text:
         enabled: true
 settings:
+  exclude_unpublished: true
   expose_entity_ids: false
   schema_description: 'Beep boop I am a schema'
   schema_version: '1'
+  simple_queries: true
   simple_unions: true
   site_name: false
   site_slogan: false
@@ -149,4 +151,4 @@ settings:
   svg_image: false
   svg_filesize: 100
   custom: {  }
-  edge_max_limit: 100
+  edge_max_limit: 20

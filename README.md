@@ -4,6 +4,8 @@
 
 ## Local environment setup
 
+Recommend Lando version 3.20+
+
 If you plan to use a HMR theme via the lando proxy, you need to trust your [Lando SSL certificates](https://docs.lando.dev/core/v3/security.html#trusting-the-ca).
 
 ```bash

@@ -323,15 +323,7 @@ ui:
 libraries:
   excluded_libraries:
     - choices
-    - codemirror
     - jquery.chosen
-    - jquery.inputmask
-    - jquery.intl-tel-input
-    - jquery.rateit
-    - jquery.textcounter
-    - jquery.timepicker
-    - signature_pad
-    - tabby
 requirements:
   cdn: false
   clientside_validation: false

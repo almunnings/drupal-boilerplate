@@ -22,17 +22,9 @@
 // Import sensible Drupal defaults.
 include __DIR__ . "/default.settings.php";
 
-// Local development mode.
-$is_local_dev = getenv('LANDO') === 'ON' || getenv('IS_DDEV_PROJECT') === 'true' || getenv('ENVIRONMENT_LOCAL') === 'true';
-
 // Toggle between development and production settings php.
 if (!getenv('ENVIRONMENT_TYPE')) {
-  putenv('ENVIRONMENT_TYPE=' . ($is_local_dev ? 'development' : 'production'));
-}
-
-// Enable specific settings for local development.
-if (!getenv('ENVIRONMENT_LOCAL') && getenv('ENVIRONMENT_TYPE') !== 'production') {
-  putenv('ENVIRONMENT_LOCAL=' . ($is_local_dev ? 'true' : 'false'));
+  putenv('ENVIRONMENT_TYPE=production');
 }
 
 // Hash salt.
@@ -44,11 +36,11 @@ include __DIR__ . '/settings.memcache.php';
 // Database connection.
 $databases['default']['default'] = [
   'driver' => 'mysql',
-  'database' => getenv('MARIADB_DATABASE') ?: 'drupal10',
-  'username' => getenv('MARIADB_USER') ?: 'drupal10',
-  'password' => getenv('MARIADB_PASSWORD') ?: 'drupal10',
-  'host' => getenv('MARIADB_HOST') ?: 'database',
-  'port' => getenv('MARIADB_PORT') ?: 3306,
+  'database' => getenv('MARIADB_DATABASE'),
+  'username' => getenv('MARIADB_USER'),
+  'password' => getenv('MARIADB_PASSWORD'),
+  'host' => getenv('MARIADB_HOST'),
+  'port' => getenv('MARIADB_PORT'),
   'prefix' => '',
   'init_commands' => [
     'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
@@ -75,6 +67,12 @@ $config['system.logging']['error_level'] = 'hide';
 $config['system.performance']['css']['preprocess'] = TRUE;
 $config['system.performance']['js']['preprocess'] = TRUE;
 $config['system.performance']['cache']['page']['max_age'] = 600;
+
+// Enable shield via config.
+$config['shield.settings']['shield_enable'] = getenv('SHIELD_USERNAME') && getenv('SHIELD_PASSWORD');
+$config['shield.settings']['credentials']['shield']['user'] = getenv('SHIELD_USERNAME');
+$config['shield.settings']['credentials']['shield']['pass'] = getenv('SHIELD_PASSWORD');
+$config['shield.settings']['print'] = 'Login';
 
 // Disable exporting development config.
 $settings['config_exclude_modules'] = [

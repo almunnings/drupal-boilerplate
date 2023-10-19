@@ -5,22 +5,14 @@
  * Development environment settings.
  */
 
-// Disable caching locally.
-$is_local_dev = getenv('ENVIRONMENT_LOCAL') === 'true';
+// Local development mode.
+$local = getenv('LANDO') || getenv('IS_DDEV_PROJECT');
 
 // Disable page caching.
-if ($is_local_dev) {
+if ($local) {
   $config['system.performance']['cache']['page']['max_age'] = 0;
   $config['system.performance']['css']['preprocess'] = FALSE;
   $config['system.performance']['js']['preprocess'] = FALSE;
-}
-
-// Enable shield for development mode non-local.
-if (!$is_local_dev) {
-  $config['shield.settings']['shield_enable'] = getenv('SHIELD_USERNAME') && getenv('SHIELD_PASSWORD');
-  $config['shield.settings']['credentials']['shield']['user'] = getenv('SHIELD_USERNAME');
-  $config['shield.settings']['credentials']['shield']['pass'] = getenv('SHIELD_PASSWORD');
-  $config['shield.settings']['print'] = 'Login';
 }
 
 // Debugging.
