@@ -22,10 +22,13 @@ parameters:
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
     allowedMethods: ['*']
 
-    # Enable CORS for local headless development.
+    # Enable CORS for headless development.
     allowedOriginsPatterns:
       - '#\.lndo\.site$#'
       - '#\.ddev\.site$#'
+      - '#\.amazee\.io$#'
+      - '#\.ironstar\.io$#'
+      - '#\.platformsh\.site$#'
       - '#localhost:\d+$#'
 
     # Sets the Access-Control-Expose-Headers header.

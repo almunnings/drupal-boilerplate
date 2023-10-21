@@ -22,10 +22,8 @@
 // Import sensible Drupal defaults.
 include __DIR__ . "/default.settings.php";
 
-// Toggle between development and production settings php.
-if (!getenv('ENVIRONMENT_TYPE')) {
-  putenv('ENVIRONMENT_TYPE=production');
-}
+// Default environment type.
+putenv('ENVIRONMENT_TYPE=' . getenv('ENVIRONMENT_TYPE') ?: 'production');
 
 // Hash salt.
 $settings['hash_salt'] = hash('sha256', getenv('DRUPAL_HASH_SALT') ?: getenv('MARIADB_HOST'));
@@ -36,11 +34,11 @@ include __DIR__ . '/settings.memcache.php';
 // Database connection.
 $databases['default']['default'] = [
   'driver' => 'mysql',
-  'database' => getenv('MARIADB_DATABASE'),
-  'username' => getenv('MARIADB_USER'),
-  'password' => getenv('MARIADB_PASSWORD'),
-  'host' => getenv('MARIADB_HOST'),
-  'port' => getenv('MARIADB_PORT'),
+  'database' => getenv('MARIADB_DATABASE') ?: 'drupal10',
+  'username' => getenv('MARIADB_USER') ?: 'drupal10',
+  'password' => getenv('MARIADB_PASSWORD') ?: 'drupal10',
+  'host' => getenv('MARIADB_HOST') ?: 'database',
+  'port' => getenv('MARIADB_PORT') ?: 3306,
   'prefix' => '',
   'init_commands' => [
     'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
@@ -51,7 +49,7 @@ $databases['default']['default'] = [
 $settings['config_sync_directory'] = getenv('DRUPAL_CONFIG_DIR') ?: '../config/sync';
 $settings['file_public_path'] = getenv('DRUPAL_PUBLIC_DIR') ?: 'sites/default/files';
 $settings['file_private_path'] = getenv('DRUPAL_PRIVATE_DIR') ?: 'sites/default/files/private';
-$config['system.file']['path']['temporary'] = getenv('DRUPAL_TMP_DIR') ?: getenv('TMP');
+$config['system.file']['path']['temporary'] = getenv('DRUPAL_TMP_DIR') ?: getenv('TMP') ?: sys_get_temp_dir();
 
 // Enable all reverse proxies.
 $settings['reverse_proxy'] = TRUE;
