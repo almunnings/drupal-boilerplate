@@ -72,6 +72,13 @@ $config['shield.settings']['credentials']['shield']['user'] = getenv('SHIELD_USE
 $config['shield.settings']['credentials']['shield']['pass'] = getenv('SHIELD_PASSWORD');
 $config['shield.settings']['print'] = 'Login';
 
+// Force email to use envars.
+$config['symfony_mailer.mailer_transport.smtp']['configuration']['user'] = getenv('SMTP_USERNAME');
+$config['symfony_mailer.mailer_transport.smtp']['configuration']['pass'] = getenv('SMTP_PASSWORD');
+$config['symfony_mailer.mailer_transport.smtp']['configuration']['host'] = getenv('SMTP_HOST');
+$config['symfony_mailer.mailer_transport.smtp']['configuration']['port'] = getenv('SMTP_PORT');
+$config['symfony_mailer.mailer_transport.smtp']['configuration']['query']['verify_peer'] = TRUE;
+
 // Disable exporting development config.
 $settings['config_exclude_modules'] = [
   'devel',
