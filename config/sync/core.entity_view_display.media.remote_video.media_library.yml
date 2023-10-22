@@ -5,10 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - field.field.media.remote_video.field_media_oembed_video
-    - image.style.medium
+    - image.style.media_library
     - media.type.remote_video
   module:
-    - image
+    - svg_image
 _core:
   default_config_hash: PGGoP-hVkXe_S-GiJRAub4PHDu0KhMExylclrqjdJb4
 id: media.remote_video.media_library
@@ -21,9 +21,13 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: medium
+      image_style: media_library
       image_loading:
         attribute: lazy
+      svg_attributes:
+        width: 220
+        height: 220
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content

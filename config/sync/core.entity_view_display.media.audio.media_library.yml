@@ -5,10 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - field.field.media.audio.field_media_audio_file
-    - image.style.thumbnail
+    - image.style.media_library
     - media.type.audio
   module:
-    - image
+    - svg_image
 _core:
   default_config_hash: tcAUW1Xzq5Tjw5jomR6XKGSgfiXO7QiRAHJBF-n0akg
 id: media.audio.media_library
@@ -21,9 +21,13 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: thumbnail
+      image_style: media_library
       image_loading:
         attribute: lazy
+      svg_attributes:
+        width: 220
+        height: 220
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content
