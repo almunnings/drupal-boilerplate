@@ -5,8 +5,6 @@ config:
   php: '8.1'
   composer_version: '2.6.6'
   webroot: web
-  build:
-    - appserver: composer install --profile
 
 proxy:
   node:
@@ -20,6 +18,8 @@ services:
       environment:
         ENVIRONMENT_TYPE: development
         DRUSH_OPTIONS_URI: "https://drupal-boilerplate.lndo.site"
+    build:
+      - composer install --profile
 
   database:
     type: mariadb:custom
@@ -47,6 +47,9 @@ services:
     sslExpose: false
     port: 3000
     scanner: false
+    build:
+      - npm --prefix web/themes/contrib/dvb ci
+      - npm --prefix web/themes/contrib/dvb run build
 
 tooling:
   npm:

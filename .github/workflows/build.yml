@@ -6,25 +6,26 @@ on:
 
 env:
   TERM: xterm
+  LANDO_VERSION: 3.20.8
 
 jobs:
   lando:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Lando install
         run: |
-          sudo curl -fsSL -o /usr/local/bin/lando "https://github.com/lando/cli/releases/download/v3.20.4/lando-linux-x64-v3.20.4"
+          sudo curl -fsSL -o /usr/local/bin/lando "https://github.com/lando/cli/releases/download/v${{ env.LANDO_VERSION }}/lando-linux-x64-v${{ env.LANDO_VERSION }}"
           sudo chmod +x /usr/local/bin/lando
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ~/.lando/cache
-          key: lando-3.20.4-${{ github.ref }}
+          key: lando-${{ env.LANDO_VERSION }}-${{ github.ref }}
           restore-keys: |
-            lando-3.20.4-
+            lando-${{ env.LANDO_VERSION }}-
 
       - name: Lando start
         run: lando start
