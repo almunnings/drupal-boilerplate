@@ -43,16 +43,15 @@
         "drupal/ajax_loader": "^2.1",
         "drupal/allowed_formats": "^2.0",
         "drupal/block_field": "^1.0@RC",
-        "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-recommended": "^10.1",
-        "drupal/devel": "^5.0",
+        "drupal/core-composer-scaffold": "^10.2",
+        "drupal/core-recommended": "^10.2",
         "drupal/dvb": "dev-custom",
         "drupal/field_group": "^3.4",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/graphql": "^4.4",
-        "drupal/graphql_compose": "2.0.x-dev@dev",
+        "drupal/graphql_compose": "^2.0",
         "drupal/graphql_export": "^2.0",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/linkit": "^6.1",
@@ -64,7 +63,7 @@
         "drupal/redirect": "^1.8",
         "drupal/shield": "^1.7",
         "drupal/svg_image": "^3.0",
-        "drupal/symfony_mailer": "^1.4@beta",
+        "drupal/symfony_mailer": "^1.4",
         "drupal/tablefield": "^2.4",
         "drupal/typed_data": "^1.0@beta",
         "drupal/viewfield": "^3.0@beta",
@@ -74,7 +73,8 @@
         "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.1"
+        "drupal/core-dev": "^10.2",
+        "drupal/devel": "^5.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -88,7 +88,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         },
         "audit": {
             "abandoned": "report"

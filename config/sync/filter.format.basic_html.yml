@@ -12,6 +12,30 @@ name: 'Basic HTML'
 format: basic_html
 weight: -10
 filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: false
+    weight: -45
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: false
+    weight: -48
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: -47
+    settings: {  }
   filter_html:
     id: filter_html
     provider: filter
@@ -21,17 +45,11 @@ filters:
       allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type start> <strong> <em> <sub> <sup> <li>'
       filter_html_help: false
       filter_html_nofollow: false
-  filter_align:
-    id: filter_align
+  filter_html_escape:
+    id: filter_html_escape
     provider: filter
     status: false
-    weight: -48
-    settings: {  }
-  filter_caption:
-    id: filter_caption
-    provider: filter
-    status: false
-    weight: -47
+    weight: -43
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
@@ -39,19 +57,18 @@ filters:
     status: false
     weight: -46
     settings: {  }
-  editor_file_reference:
-    id: editor_file_reference
-    provider: editor
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
     status: false
-    weight: -45
+    weight: -40
     settings: {  }
-  linkit:
-    id: linkit
-    provider: linkit
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
     status: true
-    weight: -49
-    settings:
-      title: true
+    weight: -44
+    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -59,24 +76,13 @@ filters:
     weight: -41
     settings:
       filter_url_length: 72
-  filter_autop:
-    id: filter_autop
-    provider: filter
-    status: false
-    weight: -42
-    settings: {  }
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
-    status: false
-    weight: -40
-    settings: {  }
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
-    status: false
-    weight: -43
-    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -49
+    settings:
+      title: true
   media_embed:
     id: media_embed
     provider: media
@@ -86,9 +92,3 @@ filters:
       default_view_mode: default
       allowed_view_modes: {  }
       allowed_media_types: {  }
-  filter_image_lazy_load:
-    id: filter_image_lazy_load
-    provider: filter
-    status: true
-    weight: -44
-    settings: {  }

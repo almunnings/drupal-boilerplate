@@ -21,7 +21,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg svg'
+  file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''

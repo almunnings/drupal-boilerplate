@@ -151,5 +151,6 @@ settings:
   svg_image: false
   svg_filesize: 100
   inflector_langcode: en
+  inflector_singularize: true
   custom: {  }
   edge_max_limit: 20
