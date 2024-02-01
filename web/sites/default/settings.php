@@ -48,7 +48,7 @@ $databases['default']['default'] = [
 // Path config.
 $settings['config_sync_directory'] = getenv('DRUPAL_CONFIG_DIR') ?: '../config/sync';
 $settings['file_public_path'] = getenv('DRUPAL_PUBLIC_DIR') ?: 'sites/default/files';
-$settings['file_private_path'] = getenv('DRUPAL_PRIVATE_DIR') ?: 'sites/default/files/private';
+$settings['file_private_path'] = getenv('DRUPAL_PRIVATE_DIR') ?: '../private';
 $config['system.file']['path']['temporary'] = getenv('DRUPAL_TMP_DIR') ?: getenv('TMP') ?: sys_get_temp_dir();
 
 // Enable all reverse proxies.
@@ -84,6 +84,11 @@ $settings['config_exclude_modules'] = [
   'devel',
   'stage_file_proxy',
 ];
+
+// Prefer not to use Symfony's APCu. Native is faster.
+if (extension_loaded('apcu') && ini_get('apc.enabled')) {
+  $settings['class_loader_auto_detect'] = FALSE;
+}
 
 // Environment specific config.
 // Add a settings.local.php & services.local.yml at the end for good measure.

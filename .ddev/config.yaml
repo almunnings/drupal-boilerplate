@@ -1,0 +1,48 @@
+name: drupal-boilerplate-ddev
+type: drupal10
+
+router_http_port: '8080'
+router_https_port: '8443'
+
+php_version: '8.1'
+composer_version: '2'
+docroot: web
+webserver_type: nginx-fpm
+
+nodejs_version: '18'
+
+web_extra_exposed_ports:
+  - name: nodejs
+    container_port: 3000
+    https_port: 3333
+
+upload_dirs:
+  - 'sites/default/files'
+  - '../private'
+
+database:
+  type: mariadb
+  version: '10.11'
+
+web_environment:
+  - ENVIRONMENT_TYPE=development
+  - MARIADB_DATABASE=db
+  - MARIADB_USER=db
+  - MARIADB_HOST=db
+  - MARIADB_PASSWORD=db
+  - DRUSH_OPTIONS_URI=$DDEV_PRIMARY_URL
+
+use_dns_when_possible: true
+disable_settings_management: true
+
+performance_mode: 'none'
+
+hooks:
+  post-start:
+    - exec: >
+        if ! drush status --field=bootstrap | grep -qi "successful"; then
+          drush si --existing-config --account-name=admin -y;
+        fi
+
+        npm --prefix web/themes/contrib/dvb ci
+        npm --prefix web/themes/contrib/dvb run build

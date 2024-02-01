@@ -3,13 +3,13 @@ recipe: drupal10
 
 config:
   php: '8.1'
-  composer_version: '2.6.6'
+  composer_version: '2'
   webroot: web
 
 proxy:
   node:
     # Change drupal-boilerplate to match "name:" when renaming project.
-    - "node.drupal-boilerplate.lndo.site:3000"
+    - "node-drupal-boilerplate.lndo.site:3000"
 
 services:
   appserver:
