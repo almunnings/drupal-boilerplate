@@ -24,12 +24,12 @@ parameters:
 
     # Enable CORS for headless development.
     allowedOriginsPatterns:
-      - '#\.lndo\.site$#'
-      - '#\.ddev\.site$#'
+      - '#^localhost(:\d+)?$#'
+      - '#\.lndo\.site(:\d+)?$#'
+      - '#\.ddev\.site(:\d+)?$#'
       - '#\.amazee\.io$#'
       - '#\.ironstar\.io$#'
       - '#\.platformsh\.site$#'
-      - '#localhost:\d+$#'
 
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
