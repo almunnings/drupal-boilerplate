@@ -1,15 +1,15 @@
-name: drupal-boilerplate-ddev
+name: drupal-boilerplate
 type: drupal10
 
-router_http_port: '8080'
-router_https_port: '8443'
+router_http_port: "8080"
+router_https_port: "8443"
 
-php_version: '8.1'
-composer_version: '2'
+php_version: "8.1"
+composer_version: "2"
 docroot: web
 webserver_type: nginx-fpm
 
-nodejs_version: '18'
+nodejs_version: "18"
 
 web_extra_exposed_ports:
   - name: nodejs
@@ -17,12 +17,12 @@ web_extra_exposed_ports:
     https_port: 3333
 
 upload_dirs:
-  - 'sites/default/files'
-  - '../private'
+  - "sites/default/files"
+  - "../private"
 
 database:
   type: mariadb
-  version: '10.11'
+  version: "10.11"
 
 web_environment:
   - ENVIRONMENT_TYPE=development
@@ -35,7 +35,7 @@ web_environment:
 use_dns_when_possible: true
 disable_settings_management: true
 
-performance_mode: 'none'
+performance_mode: "none"
 
 hooks:
   post-start:

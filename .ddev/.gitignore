@@ -1,0 +1,7 @@
+# Ignore everything by defaukt
+*
+!/.gitignore
+
+# Allow base yaml files not starting with dot.
+!/*.yaml
+/.*.yaml
