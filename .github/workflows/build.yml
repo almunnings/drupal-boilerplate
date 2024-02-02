@@ -10,9 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: lando/setup-lando@v2
+        with:
+          lando-version: latest
 
   ddev:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: ddev/github-action-setup-ddev@v1
+        with:
+          version: latest
