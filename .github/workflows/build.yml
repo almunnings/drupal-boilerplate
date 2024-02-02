@@ -12,6 +12,7 @@ jobs:
       - uses: lando/setup-lando@v2
         with:
           lando-version: latest
+      - run: lando start
 
   ddev:
     runs-on: ubuntu-latest
