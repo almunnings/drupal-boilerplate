@@ -46,6 +46,3 @@ hooks:
         if ! drush status --field=bootstrap | grep -qi "successful"; then
           drush si --existing-config --account-name=admin -y;
         fi
-
-        npm --prefix web/themes/contrib/dvb ci
-        npm --prefix web/themes/contrib/dvb run build

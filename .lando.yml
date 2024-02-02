@@ -2,8 +2,8 @@ name: drupal-boilerplate
 recipe: drupal10
 
 config:
-  php: '8.1'
-  composer_version: '2'
+  php: "8.1"
+  composer_version: "2"
   webroot: web
 
 proxy:
@@ -13,6 +13,7 @@ proxy:
 
 services:
   appserver:
+    api: 3
     healthcheck: drush sql:query ';'
     overrides:
       environment:
@@ -22,11 +23,13 @@ services:
       - composer install --profile
 
   database:
+    api: 3
     type: mariadb:custom
     overrides:
       image: bitnami/mariadb:10.11-debian-11
 
   memcached:
+    api: 3
     type: memcached:custom
     mem: 64
     overrides:
@@ -35,6 +38,7 @@ services:
         MEMCACHED_MAX_ITEM_SIZE: 8388608
 
   mailhog:
+    api: 3
     type: mailhog
     overrides:
       platform: linux/amd64
@@ -42,14 +46,12 @@ services:
       - appserver
 
   node:
+    api: 3
     type: node:18
     ssl: true
     sslExpose: false
     port: 3000
     scanner: false
-    build:
-      - npm --prefix web/themes/contrib/dvb ci
-      - npm --prefix web/themes/contrib/dvb run build
 
 tooling:
   npm:
