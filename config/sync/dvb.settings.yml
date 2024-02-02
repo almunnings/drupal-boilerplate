@@ -7,3 +7,7 @@ logo:
   use_default: 1
 favicon:
   use_default: 1
+vite:
+  port: "3000"
+  dist_path: dist
+  manifest_path: dist/.vite/manifest.json
