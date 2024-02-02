@@ -41,6 +41,8 @@ performance_mode: "none"
 hooks:
   post-start:
     - exec: >
+        composer install --profile
+
         if ! drush status --field=bootstrap | grep -qi "successful"; then
           drush si --existing-config --account-name=admin -y;
         fi
