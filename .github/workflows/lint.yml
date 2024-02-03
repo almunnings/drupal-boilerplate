@@ -1,0 +1,47 @@
+name: Lint
+
+on:
+  pull_request:
+
+env:
+  PHP_VERSION: 8.1
+  TERM: xterm
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: "actions/checkout@v4"
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v42
+        with:
+          files: "{docroot,web}/{modules,themes}/custom/**/*.{php,module,inc,install,test,profile,theme,yml}"
+          files_ignore: |
+            *Test.php
+            *TestBase.php
+            **/tests/
+
+      - name: Set up PHP
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "${{ env.PHP_VERSION }}"
+          tools: "cs2pr, phpcs, composer"
+        if: ${{ steps.changed-files.outputs.any_changed == 'true' }}
+
+      - name: Install Drupal Coder
+        run: |
+          composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+          composer global require --ignore-platform-reqs drupal/coder
+        if: ${{ steps.changed-files.outputs.any_changed == 'true' }}
+
+      - name: PHPCS
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            phpcs -q --report=checkstyle --standard=Drupal,DrupalPractice -n $file | cs2pr
+          done
+        if: ${{ steps.changed-files.outputs.any_changed == 'true' }}

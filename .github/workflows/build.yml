@@ -4,19 +4,27 @@ on:
   push:
     branches: [main]
 
+env:
+  TERM: xterm
+
 jobs:
   lando:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: lando/setup-lando@v2
         with:
           lando-version: latest
+      - run: lando start
 
   ddev:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: ddev/github-action-setup-ddev@v1
         with:
           version: latest
