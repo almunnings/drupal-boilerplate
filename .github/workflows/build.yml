@@ -12,7 +12,8 @@ jobs:
       - uses: lando/setup-lando@v2
         with:
           lando-version: latest
-      - run: lando start
+      - run: lando start -vvv
+      - run: curl https://drupal-boilerplate.lndo.site/
 
   ddev:
     runs-on: ubuntu-latest
