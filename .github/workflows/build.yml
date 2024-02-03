@@ -13,7 +13,7 @@ jobs:
         with:
           lando-version: latest
       - run: lando start -vvv
-      - run: curl https://drupal-boilerplate.lndo.site/
+      - run: curl -k https://drupal-boilerplate.lndo.site/
 
   ddev:
     runs-on: ubuntu-latest
