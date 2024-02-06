@@ -3,3 +3,4 @@
 
 .git
 /web/sites/simpletest
+/web/core/node_modules
