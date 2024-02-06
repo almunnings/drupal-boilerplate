@@ -2,3 +2,4 @@
 # https://docs.docker.com/desktop/synchronized-file-sharing/#use-syncignore
 
 .git
+/web/sites/simpletest
