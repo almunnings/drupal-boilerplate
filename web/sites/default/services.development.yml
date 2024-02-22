@@ -12,19 +12,19 @@ parameters:
 
     # Specify allowed headers, like 'x-allowed-header'.
     allowedHeaders:
-      - 'x-csrf-token'
-      - 'content-type'
-      - 'authorization'
-      - 'origin'
-      - 'accept'
-      - 'x-requested-with'
+      - "x-csrf-token"
+      - "content-type"
+      - "authorization"
+      - "origin"
+      - "accept"
+      - "x-requested-with"
 
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
-    allowedMethods: ['*']
+    allowedMethods: ["*"]
 
     # Enable CORS for headless development.
     allowedOriginsPatterns:
-      - '#^localhost(:\d+)?$#'
+      - '#^https?://localhost(:\d+)?$#'
       - '#\.lndo\.site(:\d+)?$#'
       - '#\.ddev\.site(:\d+)?$#'
       - '#\.amazee\.io$#'
