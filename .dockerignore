@@ -1,6 +1,5 @@
 # Default ignores
 .git
-.DS_Store
 /vendor/
 **/node_modules/
 **/*.sql
@@ -10,3 +9,10 @@
 # Volumes
 /private/
 **/web/sites/*/files/
+
+# Trash
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.tmp
+*.swp

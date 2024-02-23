@@ -1,8 +1,9 @@
-ARG PHP_IMAGE
-FROM ${PHP_IMAGE} as php
+ARG CLI_IMAGE
+FROM ${CLI_IMAGE} as cli
 
-FROM nginx:1-alpine
+FROM uselagoon/nginx-drupal:latest
 
-COPY .docker/nginx.conf /etc/nginx/conf.d/default.conf
+ENV WEBROOT web
+ENV BASIC_AUTH off
 
-COPY --from=php /app /app
+COPY --from=cli /app /app
