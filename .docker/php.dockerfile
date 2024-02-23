@@ -3,6 +3,7 @@ FROM php:8.1-fpm-alpine
 WORKDIR /app
 
 ENV MEMCACHED_DEPS zlib-dev libmemcached-dev cyrus-sasl-dev
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN set -xe \
   && apk add --no-cache --update --virtual .phpize-deps $PHPIZE_DEPS \
