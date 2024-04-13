@@ -145,6 +145,11 @@
             "locations": {
                 "web-root": "web/"
             }
+        },
+        "patches": {
+            "drupal/tablefield": {
+                "3397688: PHP 8.2 support": "https://www.drupal.org/files/issues/2023-12-21/tablefield-php8.2-deprecated-creation-of-dynamic-properties-3397688-9.patch"
+            }
         }
     }
 }
