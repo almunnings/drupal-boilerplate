@@ -47,7 +47,7 @@ services:
 
   node:
     api: 3
-    type: node:18
+    type: node:20
     ssl: true
     sslExpose: false
     port: 3000
