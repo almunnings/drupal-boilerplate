@@ -1,4 +1,4 @@
-FROM uselagoon/php-8.1-cli:latest
+FROM uselagoon/php-8.2-cli:latest
 
 ENV WEBROOT web
 ENV PATH "/app/vendor/bin:${PATH}"

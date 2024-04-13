@@ -51,7 +51,7 @@
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/graphql": "^4.4",
-        "drupal/graphql_compose": "2.1.x-dev",
+        "drupal/graphql_compose": "^2.1@beta",
         "drupal/graphql_export": "^2.0",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/linkit": "^6.1",

@@ -11,6 +11,8 @@ entity_config:
       enabled: true
     large_2x:
       enabled: true
+    media_library:
+      enabled: false
     medium:
       enabled: true
     medium_2x:
@@ -33,11 +35,19 @@ entity_config:
     video:
       enabled: true
   menu:
+    account:
+      enabled: false
+    admin:
+      enabled: false
+    devel:
+      enabled: false
     footer:
       enabled: true
     main:
       enabled: true
       menu_route_enabled: true
+    tools:
+      enabled: false
   node:
     page:
       enabled: true
@@ -61,9 +71,6 @@ entity_config:
       enabled: true
   taxonomy_term:
     tags:
-      enabled: true
-  user:
-    user:
       enabled: true
 field_config:
   block_content:

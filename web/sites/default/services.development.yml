@@ -28,7 +28,6 @@ parameters:
       - '#\.lndo\.site(:\d+)?$#'
       - '#\.ddev\.site(:\d+)?$#'
       - '#\.amazee\.io$#'
-      - '#\.ironstar\.io$#'
       - '#\.platformsh\.site$#'
 
     # Sets the Access-Control-Expose-Headers header.
