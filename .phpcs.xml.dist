@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="Boilerplate">
     <description>PHP CodeSniffer</description>
+    <!-- Base Drupal standards -->
     <rule ref="Drupal"/>
     <rule ref="DrupalPractice"/>
+
+    <!-- Check for cross-version support for PHP 8.1 ~ 8.3 -->
+    <rule ref="PHPCompatibility"/>
+    <config name="testVersion" value="8.1-8.3"/>
 
     <!-- Sensible exclude -->
     <exclude-pattern>*/node_modules/*</exclude-pattern>
@@ -11,5 +16,5 @@
     <exclude-pattern>*/web/core/*</exclude-pattern>
 
     <!-- Limit extensions -->
-    <arg name="extensions" value="inc,install,module,php,profile,theme,yml"/>
+    <arg name="extensions" value="php,module,inc,install,test,profile,theme,yml"/>
 </ruleset>

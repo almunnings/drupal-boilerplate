@@ -64,6 +64,12 @@ tooling:
     dir: /app/web/themes/contrib/dvb
     cmd: npm
 
+  phpcs:
+    service: appserver
+    description: Run PHPUnit tests.
+    cmd:
+      - appserver: /app/vendor/bin/phpcs --standard=/app/.phpcs.xml.dist -n -p web/themes/ web/modules/
+
 events:
   post-start:
     - appserver: >
